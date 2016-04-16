@@ -121,9 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_goProjectilePrefab: {fileID: 182656, guid: 3f1c673fe37167240a0369b75fed2704, type: 2}
+  StaminaUsage: 0
   BulletDeviation: 21
   Bullets: 5
   BulletDelay: 0.016
+  AttackTimeS: 3
   spawnAnchor: {fileID: 0}
 --- !u!114 &11424904
 MonoBehaviour:
@@ -183,8 +185,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.12
+  m_Center: {x: 0, y: -0.05, z: 0}
 --- !u!195 &19515014
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -202,7 +204,7 @@ NavMeshAgent:
   m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 0.5
-  m_BaseOffset: 0.15
+  m_BaseOffset: 0.07
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!212 &21295116

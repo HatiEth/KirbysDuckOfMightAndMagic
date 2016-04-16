@@ -20,10 +20,12 @@ public class PlayerShift : MonoBehaviour {
 		if (Input.GetButton ("Fire1"))
 		{
 			model.NextState (PlayerShiftModel.State.Sword);
-		} else if (Input.GetButton ("Fire2"))
+		}
+		else if (Input.GetButton ("Fire2"))
 		{
 			model.NextState (PlayerShiftModel.State.Shield);
-		} else if (Input.GetButton ("Fire3"))
+		}
+		else if (Input.GetButton ("Fire3"))
 		{
 			model.NextState (PlayerShiftModel.State.Bow);
 		} 

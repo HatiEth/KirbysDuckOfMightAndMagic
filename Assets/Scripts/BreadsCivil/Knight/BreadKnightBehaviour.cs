@@ -35,6 +35,8 @@ public class BreadKnightBehaviour : MonoBehaviour {
 		Vector3 onCircle = Vector3.zero;
 
 		//TargetPosition = Vector3.Slerp(TargetPosition, Player.position + onCircle * 0.1f, Time.deltaTime);
+		if (Player == null) return;
+
 		TargetPosition = Player.position;
 
 		Agent.SetDestination(TargetPosition);

@@ -3,5 +3,5 @@ using System.Collections;
 
 public interface ICanBeShot
 {
-	void HitMe ();
+	void HitMe (IProjectile projectile);
 }

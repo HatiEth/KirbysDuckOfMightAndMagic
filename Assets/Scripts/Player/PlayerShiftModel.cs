@@ -23,7 +23,6 @@ public class PlayerShiftModel : MonoBehaviour {
 	void Start()
 	{
 		anim = transform.Find("PlayerSprite").GetComponent<Animator>();
-
 	}
 
 	public void NextState(State newState)
@@ -87,11 +86,13 @@ public class PlayerShiftModel : MonoBehaviour {
 	void handleExitShieldState()
 	{
 		anim.SetLayerWeight (3, 0.0f);
+		GetComponent<PlayerCanBeShot>().m_bBlocking = false;
 	}
 
 	void handleEnterShieldState()
 	{
 		anim.SetLayerWeight (3, 1.0f);
+		GetComponent<PlayerCanBeShot>().m_bBlocking = true;
 	}
 
 	#endregion

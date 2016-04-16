@@ -1,12 +1,24 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerCanBeShot: MonoBehaviour, ICanBeShot
 {
 	public bool m_bBlocking = false;
-	public virtual void HitMe()
+
+	void Start()
 	{
-		if (!m_bBlocking)
-			Debug.Log ("Ouchie! Player got hit!");
+	}
+
+	public virtual void HitMe(IProjectile projectile)
+	{
+		if (m_bBlocking)
+		{
+			return;
+		}
+		else
+		{
+			HealthResource hc = GetComponent<HealthResource>();
+			hc.Take(projectile.Damage);
+		}
 	}
 }
