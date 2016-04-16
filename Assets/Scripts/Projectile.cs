@@ -10,6 +10,15 @@ public class Projectile : MonoBehaviour
 		m_rigidThis = GetComponent<Rigidbody> ();
 	}
 
+	void Update()
+	{
+		float angle = Vector3.Angle (Vector3.forward, m_rigidThis.velocity);
+		if (m_rigidThis.velocity.x < 0)
+			angle = -angle;
+		Quaternion qRotation = Quaternion.Euler (new Vector3 (30.0f, 0.0f, -angle));
+		transform.localRotation = qRotation;
+	}
+
 	void OnCollisionEnter(Collision _col)
 	{
 		ICanBeShot shot = _col.gameObject.GetComponent<ICanBeShot> ();

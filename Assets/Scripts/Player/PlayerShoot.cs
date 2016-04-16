@@ -10,6 +10,7 @@ public class PlayerShoot : MonoBehaviour
 	private PlayerShiftModel m_shiftmodThis;
 
 	private bool m_bCanShoot = true;
+	private bool m_bCanSlash = true;
 	private float m_fShootDelay = 0.5f;
 	// Use this for initialization
 	void Start () 
@@ -23,8 +24,8 @@ public class PlayerShoot : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetAxis("UseMode") > 0.5f) 
-		{
+		if (Input.GetAxis("UseMode") > 0.5f && m_bCanShoot) 
+		{/*
 			if (m_bCanShoot)
 			{
 				
@@ -44,18 +45,35 @@ public class PlayerShoot : MonoBehaviour
 			if (m_bowAttackThis.m_bIsShooting)
 			{
 				m_bowAttackThis.Teleport ();	
+			}*/
+			if (m_bowAttackThis.m_bIsShooting)
+			{
+				m_bowAttackThis.Teleport ();
+			} 
+
+			else
+			{
+				m_bowAttackThis.Fire ();
 			}
+			m_bCanShoot = false;
+
 		}
 
-		if (!m_bCanShoot && Input.GetAxis ("UseMode") < 0.1f)
+		if (!m_bCanShoot && Input.GetAxis ("UseMode") <= 0.0f)
 		{
-			StartCoroutine (DelayShot ());
+			m_bCanShoot = true;
 		}
-	}
 
-	IEnumerator DelayShot()
-	{
-		yield return new WaitForSeconds (m_fShootDelay);
-		m_bCanShoot = true;
+		if (Input.GetAxis ("LeftTrigger") > 0.5f && m_bCanSlash)
+		{
+			if(!m_swordAttackThis.m_bIsSlashing)
+				m_swordAttackThis.Fire ();
+			m_bCanSlash = false;
+		}
+
+		if (Input.GetAxis ("LeftTrigger") <= 0.1f && !m_bCanSlash)
+		{
+			m_bCanSlash = true;
+		}
 	}
 }

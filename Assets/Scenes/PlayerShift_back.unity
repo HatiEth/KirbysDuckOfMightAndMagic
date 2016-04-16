@@ -219,7 +219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484626, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11463634, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
       propertyPath: m_shiftmodThis
@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 1275822752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2156436, y: 3.2156441, z: 3.2156441}
+  m_LocalScale: {x: 0.63364077, y: 0.633641, z: 0.633641}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -430,7 +430,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450116, guid: f9138dad7212d6c4488684576e23bc42, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11465552, guid: f9138dad7212d6c4488684576e23bc42, type: 2}
       propertyPath: Speed

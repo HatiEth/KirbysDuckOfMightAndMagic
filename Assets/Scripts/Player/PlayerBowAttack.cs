@@ -14,7 +14,7 @@ public class PlayerBowAttack : ProjectileWeapon
 	protected void Start () 
 	{
 		base.Start ();
-		m_fDestroyDelay = 0.0f;
+		m_fDestroyDelay = 0.75f;
 	}
 	
 	// Update is called once per frame
@@ -34,16 +34,19 @@ public class PlayerBowAttack : ProjectileWeapon
 
 	public override void Fire()
 	{
+		Debug.Log ("Fire Arrow");
 		m_goActiveArrow = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
-		m_goActiveArrow.transform.parent = this.transform;
 		m_rigidActiveArrow = m_goActiveArrow.GetComponent<Rigidbody> ();
 		m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
+		StartCoroutine (DelayDestroyProjectile(m_goActiveArrow));
 	}
 
 	public void Teleport()
 	{
+		Debug.Log ("Teleport to Arrow");
 		m_rigidPlayer.MovePosition (m_rigidActiveArrow.position);
-		StartCoroutine (DestroyProjectile (m_goActiveArrow));
+		m_rigidPlayer.transform.position = m_rigidActiveArrow.position;
+		DestroyProjectile (m_goActiveArrow);
 		m_goActiveArrow = null;
 		m_rigidActiveArrow = null;
 		m_bIsShooting = false;
