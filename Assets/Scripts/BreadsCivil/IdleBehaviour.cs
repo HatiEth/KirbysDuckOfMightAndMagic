@@ -3,7 +3,6 @@ using System.Collections;
 
 public class IdleBehaviour : MonoBehaviour {
 
-	Animator anim;
 	public Quaternion moveAngle;
 
 	Quaternion Angle;
@@ -13,7 +12,6 @@ public class IdleBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		anim = GetComponent<Animator>();
 		movement = GetComponent<BreadMovement>();
 		moveAngle = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 	}
@@ -29,12 +27,9 @@ public class IdleBehaviour : MonoBehaviour {
 
 	public void OnDrawGizmos()
 	{
-
 		Gizmos.color = Color.yellow;
-		Gizmos.matrix = Matrix4x4.identity;
 
 		Gizmos.DrawLine(transform.position, transform.position + Angle * new Vector3(1, 0, 0));
-
 	}
 
 	void FixedUpdate()

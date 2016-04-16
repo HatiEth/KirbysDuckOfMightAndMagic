@@ -7,9 +7,6 @@ public class PlayerShift : MonoBehaviour {
 	private PlayerMovement movement;
 	private PlayerShiftModel model;
 
-	public string InputString;
-	public int AnimationLayer;
-
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -19,13 +16,13 @@ public class PlayerShift : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButton(InputString))
+		if(Input.GetButton("Fire1"))
 		{
-			anim.SetLayerWeight(AnimationLayer, 1.0f);
+			model.NextState(PlayerShiftModel.State.Sword);
 		}
 		else
 		{
-			anim.SetLayerWeight(AnimationLayer, 0.0f);
+			model.NextState(PlayerShiftModel.State.Default);
 		}
 	}
 }

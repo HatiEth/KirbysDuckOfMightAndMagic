@@ -24,22 +24,13 @@ public class PlayerMovement : MonoBehaviour
 	float dashH = 0f;
 	float dashV = 0f;
 
-    float h, v;
-
-
 	void Awake()
 	{
-		anim = GetComponent<Animator> ();
-        sprite = GetComponent<SpriteRenderer>();
+		anim = transform.Find("PlayerSprite").GetComponent<Animator> ();
+		sprite = transform.Find("PlayerSprite").GetComponent<SpriteRenderer>();
 		playerRigidbody = GetComponent<Rigidbody> ();
 
 		originalCons = playerRigidbody.constraints;
-	}
-
-	void Update()
-	{
-			h = Input.GetAxisRaw ("Horizontal");
-			v = Input.GetAxisRaw ("Vertical");
 	}
 
 	// physics update
@@ -47,7 +38,9 @@ public class PlayerMovement : MonoBehaviour
 	{	
 		playerRigidbody.constraints = originalCons;
 		speed = walkingSpeed;
-		
+		float h = Input.GetAxis("Horizontal");
+		float v = Input.GetAxis("Vertical");
+
 		if(isDashing)
 		{
 			speed = dashSpeed;
@@ -89,19 +82,22 @@ public class PlayerMovement : MonoBehaviour
 		if (isWalking)
 		{
 			Vector3 movement = new Vector3(h, 0.0f, v);
+			Quaternion newRotation = Quaternion.LookRotation(movement);
+			//playerRigidbody.MoveRotation(newRotation);
+			transform.GetChild(0).rotation = newRotation;
 		}
 	}
 
 	void Animating (float h, float v, bool walking)
 	{
-		//anim.SetFloat ("fSpeed", Mathf.Abs(h)+Mathf.Abs(v));
-		anim.SetBool("bWalk", walking);
-		anim.SetFloat("fSpeedX", h);
-		anim.SetFloat("fSpeedY", v);
-		if(h != 0)
-		{
-				sprite.flipX = h < 0;
-		}
+        //anim.SetFloat ("fSpeed", Mathf.Abs(h)+Mathf.Abs(v));
+        anim.SetBool("bWalk", walking);
+        anim.SetFloat("fSpeedX", h);
+        anim.SetFloat("fSpeedY", v);
+        if(h != 0)
+        {
+            sprite.flipX = h < 0;
+        }
 	}
 	
 	bool getKnockdown()
@@ -123,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnCollisionExit(Collision col)
 	{
-		Debug.Log("not on:" + col.collider.tag);
+		//Debug.Log("not on:" + col.collider.tag);
 		if(col.collider.tag == "Floor")
 		{
 			onFloor = false;
