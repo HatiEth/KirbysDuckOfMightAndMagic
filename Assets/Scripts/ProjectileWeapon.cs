@@ -4,36 +4,31 @@ using System.Collections;
 public class ProjectileWeapon : MonoBehaviour 
 {
 	[SerializeField]
-	private GameObject m_goProjectilePrefab;
+	protected GameObject m_goProjectilePrefab;
 
-	private Vector3 m_v3ShotDirectionOffset = new Vector3(0.0f, 0.0f, 0.0f);
-	private float m_fShotPower = 3.0f;
-	private float m_fLifeTime = 1.0f;
-	private Rigidbody m_rigidThis;
+	protected Vector3 m_v3ShotDirectionOffset = new Vector3(0.0f, 0.0f, 0.0f);
+	protected float m_fShotPower = 3.0f;
+	protected float m_fDestroyDelay = 1.0f;
+	protected Rigidbody m_rigidThis;
 
 	// Use this for initialization
-	void Start () 
+	protected virtual void Start () 
 	{
 		m_rigidThis = GetComponent<Rigidbody> ();
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
 
-	public void Fire()
+	public virtual void Fire()
 	{
 		GameObject goProjectile = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
+		goProjectile.transform.parent = this.transform;
 		Rigidbody rigidProjectile = goProjectile.GetComponent<Rigidbody> ();
 		rigidProjectile.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
-		StartCoroutine (KillProjectile (goProjectile));
+		StartCoroutine (DestroyProjectile (goProjectile));
 	}
 
-	private IEnumerator KillProjectile(GameObject _go)
+	protected IEnumerator DestroyProjectile(GameObject _go)
 	{
-		yield return new WaitForSeconds (m_fLifeTime);
+		yield return new WaitForSeconds (m_fDestroyDelay);
 		GameObject.Destroy (_go);
 	}
 }

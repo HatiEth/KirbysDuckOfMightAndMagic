@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log ("hit nondestructible");	
+			//Debug.Log ("hit nondestructible");	
 		}
 	}
 }
