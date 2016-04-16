@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class IdleBehaviour : MonoBehaviour {
@@ -22,10 +22,7 @@ public class IdleBehaviour : MonoBehaviour {
 	void Update()
 	{
 
-		if (Random.Range(0, 10) < 3)
-		{
-			moveAngle = Angle * Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-		}
+		moveAngle = Angle * Quaternion.Euler(0f, Random.Range(0f, 270f), 0f);
 
 		Angle = Quaternion.Slerp(Angle, moveAngle, Time.deltaTime);
 	}
