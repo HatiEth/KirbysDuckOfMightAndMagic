@@ -3,12 +3,12 @@ using System.Collections;
 
 public class PlayerShoot : MonoBehaviour 
 {
-	private Projectile _projectileThis;
+	private ProjectileWeapon _projectileThis;
 
 	// Use this for initialization
 	void Start () 
 	{
-		_projectileThis = GetComponent<Projectile> ();
+		_projectileThis = GetComponent<ProjectileWeapon> ();
 	}
 	
 	// Update is called once per frame

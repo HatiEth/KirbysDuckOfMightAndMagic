@@ -82,7 +82,9 @@ public class PlayerMovement : MonoBehaviour
 		if (isWalking)
 		{
 			Vector3 movement = new Vector3(h, 0.0f, v);
-			playerRigidbody.MoveRotation(newRotation);
+			Quaternion newRotation = Quaternion.LookRotation(movement);
+			//playerRigidbody.MoveRotation(newRotation);
+			transform.GetChild(0).rotation = newRotation;
 		}
 	}
 
@@ -117,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnCollisionExit(Collision col)
 	{
-		Debug.Log("not on:" + col.collider.tag);
+		//Debug.Log("not on:" + col.collider.tag);
 		if(col.collider.tag == "Floor")
 		{
 			onFloor = false;
