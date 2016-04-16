@@ -82,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
 		if (isWalking)
 		{
 			Vector3 movement = new Vector3(h, 0.0f, v);
-			Quaternion newRotation = Quaternion.LookRotation(movement);
 			//playerRigidbody.MoveRotation(newRotation);
 		}
 	}
