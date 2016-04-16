@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody playerRigidbody;
 	RigidbodyConstraints originalCons;
     SpriteRenderer sprite;
+	[SerializeField]
+	IsoCameraController m_isocamMainCamera;
 
 	public bool blockMovement = false;
 	public bool isDashing = false;
@@ -29,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
 		anim = transform.Find("PlayerSprite").GetComponent<Animator> ();
 		sprite = transform.Find("PlayerSprite").GetComponent<SpriteRenderer>();
 		playerRigidbody = GetComponent<Rigidbody> ();
-
 		originalCons = playerRigidbody.constraints;
 	}
 
@@ -70,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		movement.Set (h, 0f, v);
 		movement = movement.normalized * speed * Time.deltaTime;
+
+		m_isocamMainCamera.SetDirection (movement);
 
 		if (!moveByForce)
 			playerRigidbody.MovePosition (transform.position + movement); //current pos + movement
