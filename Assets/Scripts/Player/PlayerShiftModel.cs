@@ -76,18 +76,22 @@ public class PlayerShiftModel : MonoBehaviour {
 
 	void handleExitBowState()
 	{
+		anim.SetLayerWeight (2, 0.0f);
 	}
 
 	void handleEnterBowState()
 	{
+		anim.SetLayerWeight (2, 1.0f);
 	}
 
 	void handleExitShieldState()
 	{
+		anim.SetLayerWeight (3, 0.0f);
 	}
 
 	void handleEnterShieldState()
 	{
+		anim.SetLayerWeight (3, 1.0f);
 	}
 
 	#endregion
