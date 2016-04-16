@@ -184,6 +184,8 @@ GameObject:
   - 114: {fileID: 785779055}
   - 54: {fileID: 785779057}
   - 135: {fileID: 785779056}
+  - 114: {fileID: 785779058}
+  - 114: {fileID: 785779059}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -295,6 +297,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &785779058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785779051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0caf7e80b8c6208429dea73700d0037d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_goProjectilePrefab: {fileID: 103342, guid: c4afac41f7407f349ab7357ba9bf1965, type: 2}
+--- !u!114 &785779059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785779051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657cc73aa68301444893cc174216ac14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1275822752
 GameObject:
   m_ObjectHideFlags: 0

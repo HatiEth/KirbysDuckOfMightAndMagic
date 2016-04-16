@@ -26,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
-		anim = GetComponent<Animator> ();
-        sprite = GetComponent<SpriteRenderer>();
+		anim = transform.Find("PlayerSprite").GetComponent<Animator> ();
+		sprite = transform.Find("PlayerSprite").GetComponent<SpriteRenderer>();
 		playerRigidbody = GetComponent<Rigidbody> ();
 
 		originalCons = playerRigidbody.constraints;
@@ -38,9 +38,9 @@ public class PlayerMovement : MonoBehaviour
 	{	
 		playerRigidbody.constraints = originalCons;
 		speed = walkingSpeed;
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
-		
+		float h = Input.GetAxis("Horizontal");
+		float v = Input.GetAxis("Vertical");
+
 		if(isDashing)
 		{
 			speed = dashSpeed;
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 		if (isWalking)
 		{
 			Vector3 movement = new Vector3(h, 0.0f, v);
-			//playerRigidbody.MoveRotation(newRotation);
+			playerRigidbody.MoveRotation(newRotation);
 		}
 	}
 
