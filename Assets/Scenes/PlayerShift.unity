@@ -214,10 +214,6 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 184028, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
   m_IsPrefabParent: 0
@@ -392,6 +388,22 @@ Prefab:
     - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19515014, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_BaseOffset
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 13555906, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_Radius
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 13555906, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_Center.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 19515014, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_StoppingDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
