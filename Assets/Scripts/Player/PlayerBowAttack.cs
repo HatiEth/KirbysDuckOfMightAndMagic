@@ -38,12 +38,8 @@ public class PlayerBowAttack : ProjectileWeapon
 		m_goActiveArrow = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_rigidActiveArrow = m_goActiveArrow.GetComponent<Rigidbody> ();
 		m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
-<<<<<<< HEAD
 		StartCoroutine (DelayDestroyProjectile(m_goActiveArrow));
-=======
-
 		return true;
->>>>>>> master
 	}
 
 	public void Teleport()

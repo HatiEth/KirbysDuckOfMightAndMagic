@@ -26,12 +26,8 @@ public class ProjectileWeapon : MonoBehaviour
 		goProjectile.transform.parent = this.transform;
 		Rigidbody rigidProjectile = goProjectile.GetComponent<Rigidbody> ();
 		rigidProjectile.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
-<<<<<<< HEAD
 		StartCoroutine (DelayDestroyProjectile (goProjectile));
-=======
-		StartCoroutine (DestroyProjectile (goProjectile));
 		return true;
->>>>>>> master
 	}
 
 	protected IEnumerator DelayDestroyProjectile(GameObject _go)

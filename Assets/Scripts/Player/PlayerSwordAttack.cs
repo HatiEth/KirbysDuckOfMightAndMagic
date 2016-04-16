@@ -33,13 +33,13 @@ public class PlayerSwordAttack : ProjectileWeapon
 		}
 	}
 	
-	public override void Fire()
+	public override bool Fire()
 	{
 		Debug.Log ("Slash Attack");
 		m_goActiveSlash = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_rigidActiveSlash = m_goActiveSlash.GetComponent<Rigidbody> ();
 		StartCoroutine (SlashAttack());
-
+		return true;
 	}
 
 	private IEnumerator SlashAttack()
