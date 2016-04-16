@@ -97,6 +97,7 @@ GameObject:
   - 92: {fileID: 238316195}
   - 124: {fileID: 238316194}
   - 81: {fileID: 238316193}
+  - 114: {fileID: 238316198}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -171,6 +172,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &238316198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238316192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb216f93d49421d4baa49bee5a069538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_v3CameraToPlayerOffset: {x: 0, y: 4, z: -4.85}
+  m_fCameraSpeed: 2
+  m_fVelocityWeigth: 42
 --- !u!1001 &1142050421
 Prefab:
   m_ObjectHideFlags: 0
@@ -214,6 +229,14 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5492902, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426502, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
+      propertyPath: m_isocamMainCamera
+      value: 
+      objectReference: {fileID: 238316198}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
   m_IsPrefabParent: 0
