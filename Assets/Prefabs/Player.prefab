@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 408874}
   - 114: {fileID: 11469204}
   - 114: {fileID: 11463634}
+  - 114: {fileID: 11491818}
+  - 114: {fileID: 11459988}
   m_Layer: 8
   m_Name: GunSpawn
   m_TagString: Untagged
@@ -64,7 +66,7 @@ GameObject:
   - 114: {fileID: 11445992}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,6 +195,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShiftDuration: 1
+--- !u!114 &11459988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568fb43894ef71b449d36582d2b5e8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
+  StaminaUsage: 0
+  m_rigidPlayer: {fileID: 5492902}
 --- !u!114 &11463634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657cc73aa68301444893cc174216ac14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_shiftmodThis: {fileID: 11445992}
 --- !u!114 &11469204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,6 +233,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
+  StaminaUsage: 0
+--- !u!114 &11491818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7663d45832a0709418b322a09cd56a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_goProjectilePrefab: {fileID: 117890, guid: 678e0f5a075b3aa40b6289611ffad364, type: 2}
+  StaminaUsage: 0
 --- !u!135 &13524500
 SphereCollider:
   m_ObjectHideFlags: 1

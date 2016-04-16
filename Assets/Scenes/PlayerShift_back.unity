@@ -85,17 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &43514789 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11445992, guid: 5880ee6dfcc20084eb8289e80807947d,
-    type: 2}
-  m_PrefabInternal: {fileID: 251765553}
-  m_Script: {fileID: 11500000, guid: 6d3c1d81b85b45e43ad98d85cb34672d, type: 3}
---- !u!54 &43514792 stripped
-Rigidbody:
-  m_PrefabParentObject: {fileID: 5492902, guid: 5880ee6dfcc20084eb8289e80807947d,
-    type: 2}
-  m_PrefabInternal: {fileID: 251765553}
 --- !u!1 &238316192
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,12 +208,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484626, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11463634, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
-      propertyPath: m_shiftmodThis
-      value: 
-      objectReference: {fileID: 43514789}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
   m_IsPrefabParent: 0
@@ -303,35 +288,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1474689142 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 103362, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
-  m_PrefabInternal: {fileID: 251765553}
---- !u!114 &1474689146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1474689142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7663d45832a0709418b322a09cd56a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_goProjectilePrefab: {fileID: 117890, guid: 678e0f5a075b3aa40b6289611ffad364, type: 2}
---- !u!114 &1474689147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1474689142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 568fb43894ef71b449d36582d2b5e8c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
-  m_rigidPlayer: {fileID: 43514792}
 --- !u!1 &1734906885
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +386,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450116, guid: f9138dad7212d6c4488684576e23bc42, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11465552, guid: f9138dad7212d6c4488684576e23bc42, type: 2}
       propertyPath: Speed
