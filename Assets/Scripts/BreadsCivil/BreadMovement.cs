@@ -10,12 +10,13 @@ public class BreadMovement : MonoBehaviour {
 
 	Vector3 movement;
 
-	Animator anim;
+	protected Animator anim;
 	new Rigidbody rigidbody;
-	SpriteRenderer sprite;
+	protected SpriteRenderer sprite;
+
 
 	// Use this for initialization
-	void Start () {
+	protected virtual void Start () {
 		rigidbody = GetComponent<Rigidbody>();
 		anim = GetComponent<Animator>();
 		sprite = GetComponent<SpriteRenderer>();

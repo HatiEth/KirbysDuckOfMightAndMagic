@@ -1,13 +1,24 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Projectile : MonoBehaviour 
 {
+	public float LifetimeS = 0f;
 	Rigidbody m_rigidThis;
 
 	void Start()
 	{
 		m_rigidThis = GetComponent<Rigidbody> ();
+		if(LifetimeS > 0f)
+		{
+			StartCoroutine(HandleLifetime());
+		}
+	}
+
+	IEnumerator HandleLifetime()
+	{
+		yield return new WaitForSeconds(LifetimeS);
+		Destroy(gameObject);
 	}
 
 	void Update()
