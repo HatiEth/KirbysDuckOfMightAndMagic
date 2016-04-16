@@ -12,23 +12,33 @@ public class BreadKnightWeapon : ProjectileWeapon {
 	[SerializeField]
 	protected float BulletDelay = 0.3f;
 
+	public float AttackTimeS = 3f;
+	private float AttackTimer;
+
+	
+	
+
 	public Transform spawnAnchor;
 
-	// Use this for initialization
-	protected override void Start () {
-	
+	void Update()
+	{
+		AttackTimer = Mathf.Max(AttackTimer - Time.deltaTime, 0f);
 	}
 
-	
-	public override void Fire()
+	public override bool Fire()
 	{
+		if (AttackTimer > 0f) return false;
 		StartCoroutine(SpawnProjectiles());
+
+		AttackTimer += Mathf.Max(BulletDelay * Bullets, AttackTimeS);
+
+		return true;
 	}
 
 	protected IEnumerator SpawnProjectiles()
 	{
 		int i = 0;
-		Vector3 forward = spawnAnchor.forward;
+		Vector3 forward = transform.forward;
 
 		Quaternion q = Quaternion.Euler(0f, 0.5f * Bullets * BulletDeviation, 0f);
 

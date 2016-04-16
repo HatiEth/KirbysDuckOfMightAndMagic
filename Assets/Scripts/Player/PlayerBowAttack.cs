@@ -32,12 +32,14 @@ public class PlayerBowAttack : ProjectileWeapon
 		}
 	}
 
-	public override void Fire()
+	public override bool Fire()
 	{
 		m_goActiveArrow = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_goActiveArrow.transform.parent = this.transform;
 		m_rigidActiveArrow = m_goActiveArrow.GetComponent<Rigidbody> ();
 		m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
+
+		return true;
 	}
 
 	public void Teleport()

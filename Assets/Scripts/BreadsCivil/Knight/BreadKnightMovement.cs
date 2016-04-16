@@ -7,6 +7,7 @@ public class BreadKnightMovement : MonoBehaviour{
 	SpriteRenderer sprite;
 
 	public BreadKnightWeapon Weapon;
+	private StaminaResource Stamina;
 
 
 	// Use this for initialization
@@ -14,6 +15,7 @@ public class BreadKnightMovement : MonoBehaviour{
 		var SpriteObj = transform.FindChild("BreadKnightSprite");
 		anim = SpriteObj.GetComponent<Animator>();
 		sprite = SpriteObj.GetComponent<SpriteRenderer>();
+		Stamina = GetComponent<StaminaResource>();
 	}
 
 	public void Move(float h, float v)
@@ -30,10 +32,12 @@ public class BreadKnightMovement : MonoBehaviour{
 	}
 	void Update()
 	{
+		/*
 		if(Input.GetKeyDown(KeyCode.Alpha5))
 		{
 			Attack((GameObject.FindGameObjectWithTag("Player").transform.position - transform.position).normalized);
 		}
+		*/
 	}
 
 	public void Attack(Vector3 dir)
@@ -41,6 +45,13 @@ public class BreadKnightMovement : MonoBehaviour{
 		dir.y = 0f;
 		Weapon.transform.forward = dir;
 
-		Weapon.Fire();
+		if(Stamina.Current >= Weapon.StaminaUsage)
+		{
+			if (Weapon.Fire())
+			{
+				Stamina.Use(Weapon.StaminaUsage);
+			};
+		}
+
 	}
 }

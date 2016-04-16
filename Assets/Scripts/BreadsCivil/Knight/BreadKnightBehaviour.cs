@@ -47,19 +47,13 @@ public class BreadKnightBehaviour : MonoBehaviour {
 		else
 		{
 			movement.Move(0f, 0f);
-			//movement.Attack((TargetPosition - transform.position).normalized);
+
+			if(Vector3.Distance(transform.position, Player.position) < 0.5f)
+			{
+				movement.Attack((TargetPosition - transform.position).normalized);
+			}
 		}
 
-	}
-
-	// Update is called once per frame
-	void FixedUpdate()
-	{
-
-		if (Agent.desiredVelocity.magnitude != 0f)
-		{
-
-		}
 	}
 
 	public void OnDrawGizmos()
@@ -69,7 +63,7 @@ public class BreadKnightBehaviour : MonoBehaviour {
 
 		if(Agent != null)
 		{
-			Gizmos.DrawLine(transform.position, transform.position + Agent.desiredVelocity);
+			Gizmos.DrawLine(transform.position, transform.position + Agent.desiredVelocity.normalized * 0.3f);
 		}
 
 	}
