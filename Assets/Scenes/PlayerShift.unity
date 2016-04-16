@@ -178,6 +178,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.size
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.912
@@ -210,8 +214,83 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11412956, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+    - target: {fileID: 11424904, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: Weapon
+      value: 
+      objectReference: {fileID: 1734553166}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDelay
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[0]
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[1]
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[2]
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[3]
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[4]
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[5]
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[6]
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[7]
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[8]
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[9]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[10]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[11]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[12]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[13]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation.Array.data[14]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: BulletDeviation
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: Bullets
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1142050421
@@ -339,6 +418,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1734553166 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400786, guid: 4c221e1995c894c47ba0cc0659cea55c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1056975477}
+  m_Script: {fileID: 11500000, guid: 0580ccdfd01a51249aeb2ecced29cea4, type: 3}
 --- !u!1 &1734906885
 GameObject:
   m_ObjectHideFlags: 0

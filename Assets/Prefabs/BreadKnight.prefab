@@ -8,9 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402074}
-  - 114: {fileID: 11435830}
-  - 114: {fileID: 11412956}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: GunSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +25,7 @@ GameObject:
   - 4: {fileID: 406952}
   - 212: {fileID: 21295116}
   - 95: {fileID: 9574466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BreadKnightSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +40,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 402318}
-  m_Layer: 0
+  - 114: {fileID: 11400786}
+  m_Layer: 9
   m_Name: GunAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +61,7 @@ GameObject:
   - 195: {fileID: 19515014}
   - 135: {fileID: 13555906}
   - 114: {fileID: 11493866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BreadKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,17 +136,31 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11412956
+--- !u!114 &11400786
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118862}
+  m_GameObject: {fileID: 122744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 657cc73aa68301444893cc174216ac14, type: 3}
+  m_Script: {fileID: 11500000, guid: 0580ccdfd01a51249aeb2ecced29cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_goProjectilePrefab: {fileID: 182656, guid: 3f1c673fe37167240a0369b75fed2704, type: 2}
+  BulletDeviation:
+  - -30
+  - -25
+  - -20
+  - -15
+  - -10
+  - -5
+  - 0
+  - 5
+  - 10
+  - 15
+  BulletDelay: 0.1
+  spawnAnchor: {fileID: 402074}
 --- !u!114 &11424904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,18 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72f51f570317934a88b1218b5952a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11435830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2612fb4eeece77f438c155d9d0547043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
+  Weapon: {fileID: 0}
 --- !u!114 &11477202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,7 +216,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 141210}
   m_Enabled: 1
   m_Radius: 0.5
-  m_Speed: 1.2
+  m_Speed: 0
   m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 0

@@ -6,7 +6,7 @@ public class BreadKnightMovement : MonoBehaviour{
 	Animator anim;
 	SpriteRenderer sprite;
 
-	//public BreadKnightWeapon 
+	public BreadKnightWeapon Weapon;
 
 
 	// Use this for initialization
@@ -28,9 +28,19 @@ public class BreadKnightMovement : MonoBehaviour{
 				sprite.flipX = h < 0;
 		}
 	}
+	void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.Alpha5))
+		{
+			Attack((GameObject.FindGameObjectWithTag("Player").transform.position - transform.position).normalized);
+		}
+	}
 
 	public void Attack(Vector3 dir)
 	{
+		dir.y = 0f;
+		Weapon.transform.forward = dir;
 
+		Weapon.Fire();
 	}
 }
