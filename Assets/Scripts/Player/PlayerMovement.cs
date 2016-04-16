@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
 	float dashH = 0f;
 	float dashV = 0f;
 
+    float h, v;
+
+
 	void Awake()
 	{
 		anim = GetComponent<Animator> ();
@@ -33,13 +36,17 @@ public class PlayerMovement : MonoBehaviour
 		originalCons = playerRigidbody.constraints;
 	}
 
+    void Update()
+    {
+		h = Input.GetAxisRaw ("Horizontal");
+		v = Input.GetAxisRaw ("Vertical");
+    }
+
 	// physics update
 	void FixedUpdate()
 	{	
 		playerRigidbody.constraints = originalCons;
 		speed = walkingSpeed;
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
 		
 		if(isDashing)
 		{
@@ -82,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
 		if (isWalking)
 		{
 			Vector3 movement = new Vector3(h, 0.0f, v);
-			//playerRigidbody.MoveRotation(newRotation);
 		}
 	}
 
