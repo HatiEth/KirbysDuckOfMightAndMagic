@@ -47,6 +47,7 @@ public class BreadKnightBehaviour : MonoBehaviour {
 		else
 		{
 			movement.Move(0f, 0f);
+			movement.Attack((TargetPosition - transform.position).normalized);
 		}
 
 	}

@@ -6,6 +6,9 @@ public class BreadKnightMovement : MonoBehaviour{
 	Animator anim;
 	SpriteRenderer sprite;
 
+	//public BreadKnightWeapon 
+
+
 	// Use this for initialization
 	protected	void Start () {
 		var SpriteObj = transform.FindChild("BreadKnightSprite");
@@ -26,7 +29,7 @@ public class BreadKnightMovement : MonoBehaviour{
 		}
 	}
 
-	void Attack()
+	public void Attack(Vector3 dir)
 	{
 
 	}
