@@ -11,6 +11,7 @@ public class Pickup : MonoBehaviour {
 		if(hc != null)
 		{
 			hc.Heal(HealthAdd);
+			Destroy(gameObject);
 		}
 	}
 }

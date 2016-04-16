@@ -47,8 +47,6 @@ public class BreadKnightWeapon : ProjectileWeapon {
 
 			GameObject proj = GameObject.Instantiate(m_goProjectilePrefab, transform.position + (q*q * forward) * 0.2f, Quaternion.identity) as GameObject;
 
-			proj.transform.parent = transform;
-
 			Rigidbody rb = proj.GetComponent<Rigidbody>();
 
 
