@@ -21,6 +21,7 @@ public class IsoCameraController : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
+		if (!m_rigidPlayer) return;
 		Vector3 v3desiredPosition = (m_rigidPlayer.position + m_v3MovementDirection * m_fVelocityWeigth) + m_v3CameraToPlayerOffset;
 		transform.position = Vector3.Lerp(transform.position, v3desiredPosition, Time.deltaTime * m_fCameraSpeed);
 #if UNITY_EDITOR
