@@ -55,20 +55,6 @@ public class PlayerSwordAttack : ProjectileWeapon {
 		m_goActiveSlash = null;
 		m_rigidActiveSlash = null;
 		m_bIsSlashing = false;
-		hits.Clear();
 	}
 
-	System.Collections.Generic.List<ICanBeShot> hits = new System.Collections.Generic.List<ICanBeShot>();
-
-	void OnTriggerEnter(Collider other)
-	{
-		ICanBeShot shot = other.gameObject.GetComponent<ICanBeShot>();
-
-		Debug.Log("Hit, " + other);
-
-		if (shot != null && !hits.Contains(shot))
-		{
-			shot.HitMe(this);
-		}
-	}
 }
