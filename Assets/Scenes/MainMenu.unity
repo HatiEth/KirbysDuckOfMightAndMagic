@@ -633,7 +633,25 @@ MonoBehaviour:
   endText: Beenden
   threshhold: 0.4
   selectedClip: {fileID: 8300000, guid: 84bca0eb44f0cf648b4bc848913a0c96, type: 3}
-  randomPitch: {x: 0.7, y: 1}
+  pitches:
+  - 1
+  - 1
+  - 1
+  - 0.8
+  - 1.21
+  - 1
+  - 0.8
+  - 1.21
+  - 1
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.6
+  - 1.21
+  - 0.95
+  - 0.8
+  - 1.21
+  - 1
 --- !u!82 &1030478215
 AudioSource:
   m_ObjectHideFlags: 0
@@ -860,7 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502b10922bea9b341a2bf760e5dc253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSize: 24
+  defaultSize: 16
   defaultWidth: 578
 --- !u!114 &1112144424
 MonoBehaviour:
@@ -908,7 +926,14 @@ MonoBehaviour:
 
     Michelle @mcdonalds
 
-    Ingelis @losingelis'
+    Ingelis @losingelis
+
+
+    Special Thanks to
+
+    Vanessa @hatNenBarth
+
+    Bread Pitt @EinStein'
 --- !u!222 &1112144425
 CanvasRenderer:
   m_ObjectHideFlags: 0

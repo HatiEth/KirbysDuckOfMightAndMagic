@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour {
     [SerializeField]
     private AudioClip selectedClip;
     [SerializeField]
-    private Vector2 randomPitch;
+    private float[] pitches;
 
     private new AudioSource audio;
     private GameObject title;
@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour {
     private int selector = 0;
     private bool hasSelected = false;
     private bool credits = false;
+    private int easterEggCounter = 0;
 
     void Awake()
     {
@@ -116,8 +117,10 @@ public class MainMenu : MonoBehaviour {
 
     void PlaySound()
     {
-        float pitch = Random.RandomRange(randomPitch.x, randomPitch.y);
-        audio.pitch = pitch;
+        //float pitch = Random.RandomRange(randomPitch.x, randomPitch.y);
+        audio.pitch = pitches[easterEggCounter];
+        easterEggCounter++;
+        easterEggCounter %= pitches.Length;
         audio.PlayOneShot(selectedClip);
     }
 }

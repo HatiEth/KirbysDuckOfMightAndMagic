@@ -251,7 +251,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 84bca0eb44f0cf648b4bc848913a0c96, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.34
+  m_Pitch: 0.2
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -453,13 +453,13 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.25
   m_Text: 'This Game is in German!
 
 
-    It is best played
+    Bitte verwenden Sie ein
 
-    with a Gamepad.'
+    Enten-Gamepad'
 --- !u!222 &1881862894
 CanvasRenderer:
   m_ObjectHideFlags: 0
