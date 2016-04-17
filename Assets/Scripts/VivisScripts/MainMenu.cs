@@ -111,7 +111,8 @@ public class MainMenu : MonoBehaviour {
         selector %= 3;
         hasSelected = true;
         texts[selector].text = ">> " + strings[selector] + " <<";
-
+        // Play Sound
+        PlaySound();
         
     }
 
