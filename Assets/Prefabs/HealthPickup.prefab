@@ -27,7 +27,7 @@ GameObject:
   - 33: {fileID: 3313142}
   - 23: {fileID: 2345684}
   - 114: {fileID: 11448786}
-  - 135: {fileID: 13530696}
+  - 65: {fileID: 6590082}
   m_Layer: 13
   m_Name: HealthPickupSprite
   m_TagString: Untagged
@@ -138,6 +138,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6590082
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172880}
+  m_Material: {fileID: 13400000, guid: d61d79170c25356489cd50109b12bd4f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025823213, y: 0.022930207, z: 0.020887375}
+  m_Center: {x: -0.0000654906, y: -0.00047582574, z: -0.00041527534}
 --- !u!114 &11448786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,18 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthAdd: 1
---- !u!135 &13530696
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 172880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.012911607
-  m_Center: {x: -0.0000654906, y: -0.0004758183, z: -0.00041527534}
 --- !u!135 &13594808
 SphereCollider:
   m_ObjectHideFlags: 1

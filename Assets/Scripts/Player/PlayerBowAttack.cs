@@ -8,7 +8,8 @@ public class PlayerBowAttack : ProjectileWeapon
 	public bool m_bIsShooting { get; private set;}
 	[SerializeField]
 	private Rigidbody m_rigidPlayer;
-
+	[SerializeField]
+	private float m_fBowChargeTime = 0.5f;
 
 	// Use this for initialization
 	protected override void Start () 
@@ -37,8 +38,14 @@ public class PlayerBowAttack : ProjectileWeapon
 		Debug.Log ("Fire Arrow");
 		m_goActiveArrow = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_rigidActiveArrow = m_goActiveArrow.GetComponent<Rigidbody> ();
-		m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
-		StartCoroutine (DelayDestroyProjectile(m_goActiveArrow));
+
+		float angle = Vector3.Angle (Vector3.forward, transform.forward);
+		if (transform.forward.x < 0)
+			angle = -angle;
+		Quaternion qRotation = Quaternion.Euler (new Vector3 (30.0f, 0.0f, -angle));
+		m_goActiveArrow.transform.localRotation = qRotation;
+
+		StartCoroutine (DelayedFire ());
 		return true;
 	}
 
@@ -51,5 +58,16 @@ public class PlayerBowAttack : ProjectileWeapon
 		m_goActiveArrow = null;
 		m_rigidActiveArrow = null;
 		m_bIsShooting = false;
+	}
+
+	public IEnumerator DelayedFire()
+	{
+		yield return new WaitForSeconds (m_fBowChargeTime);
+		if (m_rigidActiveArrow != null)
+		{
+			m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
+			StartCoroutine (DelayDestroyProjectile(m_goActiveArrow));			
+		}
+
 	}
 }
