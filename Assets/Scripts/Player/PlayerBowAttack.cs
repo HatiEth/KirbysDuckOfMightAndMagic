@@ -63,7 +63,11 @@ public class PlayerBowAttack : ProjectileWeapon
 	public IEnumerator DelayedFire()
 	{
 		yield return new WaitForSeconds (m_fBowChargeTime);
-		m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
-		StartCoroutine (DelayDestroyProjectile(m_goActiveArrow));
+		if (m_rigidActiveArrow != null)
+		{
+			m_rigidActiveArrow.AddForce ((transform.forward + m_v3ShotDirectionOffset) * m_fShotPower, ForceMode.Impulse);
+			StartCoroutine (DelayDestroyProjectile(m_goActiveArrow));			
+		}
+
 	}
 }
