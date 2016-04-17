@@ -50,6 +50,8 @@ public class BreadKnightWeapon : ProjectileWeapon {
 			Rigidbody rb = proj.GetComponent<Rigidbody>();
 
 
+			proj.GetComponent<Projectile>().hitCallback = () => {DestroyProjectile (proj);};
+
 			rb.AddForce(q * forward * m_fShotPower, ForceMode.Impulse);
 			q *= Quaternion.Euler(0f, -BulletDeviation, 0f);
 

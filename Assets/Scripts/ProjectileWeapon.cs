@@ -34,10 +34,10 @@ public class ProjectileWeapon : MonoBehaviour
 	protected IEnumerator DelayDestroyProjectile(GameObject _go)
 	{
 		yield return new WaitForSeconds (m_fDestroyDelay);
-		GameObject.Destroy (_go);
+		DestroyProjectile (_go);
 	}
 
-	protected void DestroyProjectile(GameObject _go)
+	protected virtual void DestroyProjectile(GameObject _go)
 	{
 		GameObject.Destroy (_go);
 	}

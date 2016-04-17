@@ -17,26 +17,12 @@ public class PlayerSwordAttack : ProjectileWeapon {
 		m_fDestroyDelay = 0.2f;
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		m_bIsSlashing = false;
-		if (m_goActiveSlash != null)
-		{
-			m_bIsSlashing = true;
-		}
-		else
-		{
-			m_goActiveSlash = null;
-			m_rigidActiveSlash = null;
-		}
-	}
-
 	public override bool Fire()
 	{
 		Debug.Log("Slash Attack");
 		m_goActiveSlash = GameObject.Instantiate(m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_rigidActiveSlash = m_goActiveSlash.GetComponent<Rigidbody>();
+		m_bIsSlashing = true;
 		StartCoroutine(SlashAttack());
 		return true;
 	}
