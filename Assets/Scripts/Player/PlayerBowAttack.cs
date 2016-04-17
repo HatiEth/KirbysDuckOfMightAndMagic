@@ -11,7 +11,7 @@ public class PlayerBowAttack : ProjectileWeapon
 
 
 	// Use this for initialization
-	protected void Start () 
+	protected override void Start () 
 	{
 		base.Start ();
 		m_fDestroyDelay = 0.75f;

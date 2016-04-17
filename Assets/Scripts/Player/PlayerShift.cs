@@ -3,14 +3,10 @@ using System.Collections;
 
 public class PlayerShift : MonoBehaviour {
 
-	private Animator anim;
-	private PlayerMovement movement;
 	private PlayerShiftModel model;
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator>();
-		movement = GetComponent<PlayerMovement>();
 		model = GetComponent<PlayerShiftModel>();
 	}
 	

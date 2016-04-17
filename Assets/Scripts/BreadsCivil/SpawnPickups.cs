@@ -12,17 +12,14 @@ public class SpawnPickups : MonoBehaviour {
 	void Start () {
 		GetComponent<HealthResource>().DeathCallback += () =>
 		{
-			int spawned = 0;
 			for (int i=0;i<Max;++i)
 			{
 				if(Random.Range(0f, 1f) <= DropChance)
 				{
 					GameObject.Instantiate(Drop, transform.position, Quaternion.identity);
 				}
-
 			}
 		};
-	
 	}
 	
 	// Update is called once per frame

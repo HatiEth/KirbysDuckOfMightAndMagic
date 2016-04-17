@@ -24,7 +24,8 @@ public class PlayerShoot : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButton("UseMode") && m_bCanShoot) 
+		//Debug.Log(Input.GetButton("UseMode"));
+		if ((Input.GetAxisRaw("UseMode")>0.5f||Input.GetButton("UseMode")) && m_bCanShoot) 
 		{/*
 			if (m_bCanShoot)
 			{

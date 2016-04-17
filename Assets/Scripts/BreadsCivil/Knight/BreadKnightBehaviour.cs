@@ -8,9 +8,11 @@ public class BreadKnightBehaviour : MonoBehaviour {
 	private NavMeshAgent Agent;
 	private Transform Player;
 
-	Vector3 TargetPosition;
-
 	BreadKnightMovement movement;
+
+	Vector3 TargetPosition;
+	public float TargetAcquisition = 0.1f;
+	public float AttackChance = 0.33f;
 
 	// Use this for initialization
 	void Start()
@@ -22,37 +24,35 @@ public class BreadKnightBehaviour : MonoBehaviour {
 
 		Agent.updateRotation = false;
 
-		TargetPosition = Player.position;
 
 	}
 
 	void Update()
 	{
-		/*
-		float alpha = Random.Range(0f, 360f);
-		Vector3 onCircle = new Vector3(Mathf.Cos(alpha), 0.0f, Mathf.Sin(alpha));
-		*/
-		Vector3 onCircle = Vector3.zero;
-
-		//TargetPosition = Vector3.Slerp(TargetPosition, Player.position + onCircle * 0.1f, Time.deltaTime);
 		if (Player == null) return;
 
-		TargetPosition = Player.position;
 
-		Agent.SetDestination(TargetPosition);
+		Agent.SetDestination(Player.position);
 
 		if(Agent.remainingDistance > Agent.stoppingDistance)
 		{
 			Vector3 v = Agent.desiredVelocity.normalized;
 			movement.Move(v.x, v.z);
+			TargetPosition = Vector3.Lerp(TargetPosition, Player.position, TargetAcquisition);
 		}
 		else
 		{
 			movement.Move(0f, 0f);
 
-			if(Vector3.Distance(transform.position, Player.position) < 0.5f)
+			TargetPosition = Vector3.Lerp(TargetPosition, Player.position, TargetAcquisition);
+
+			if (Vector3.Distance(transform.position, Player.position) < 0.7f)
 			{
-				movement.Attack((TargetPosition - transform.position).normalized);
+
+				if(Random.Range(0f, 1f) <= AttackChance)
+				{
+					movement.Attack((TargetPosition - transform.position).normalized);
+				}
 			}
 		}
 
@@ -66,6 +66,10 @@ public class BreadKnightBehaviour : MonoBehaviour {
 		if(Agent != null)
 		{
 			Gizmos.DrawLine(transform.position, transform.position + Agent.desiredVelocity.normalized * 0.3f);
+
+
+			Gizmos.color = Color.cyan;
+			Gizmos.DrawLine(transform.position, TargetPosition);
 		}
 
 	}

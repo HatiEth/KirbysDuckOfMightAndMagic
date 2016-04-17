@@ -48,6 +48,7 @@ GameObject:
   - 114: {fileID: 11493866}
   - 114: {fileID: 11442530}
   - 114: {fileID: 11431868}
+  - 114: {fileID: 11435574}
   m_Layer: 9
   m_Name: BreadKnight
   m_TagString: Untagged
@@ -153,6 +154,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Invulnerable: 0
   Maximum: 4
+--- !u!114 &11435574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f032f390942836c418d1f591811c6530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drop: {fileID: 158296, guid: acaa2cfe42e7fac4f98a2304235d92d5, type: 2}
+  Max: 3
+  DropChance: 1
 --- !u!114 &11442530
 MonoBehaviour:
   m_ObjectHideFlags: 1

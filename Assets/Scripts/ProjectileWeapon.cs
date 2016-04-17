@@ -1,8 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using System;
 
-public class ProjectileWeapon : MonoBehaviour 
+public class ProjectileWeapon : MonoBehaviour, IProjectile
 {
+	[SerializeField]
+	private int _Damage = 0;
+
+
+
 	[SerializeField]
 	protected GameObject m_goProjectilePrefab;
 
@@ -13,6 +19,12 @@ public class ProjectileWeapon : MonoBehaviour
 	protected float m_fShotPower = 3.0f;
 	protected float m_fDestroyDelay = 1.0f;
 	protected Rigidbody m_rigidThis;
+
+	public int Damage
+	{
+		get { return _Damage; }
+		set { _Damage = value; }
+	}
 
 	// Use this for initialization
 	protected virtual void Start () 

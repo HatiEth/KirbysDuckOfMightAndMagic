@@ -66,6 +66,7 @@ GameObject:
   - 114: {fileID: 11445992}
   - 114: {fileID: 11492322}
   - 114: {fileID: 11488478}
+  - 114: {fileID: 11417268}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -156,6 +157,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11417268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fb540245e535c49b1ceaaaad9f2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bBlocking: 0
 --- !u!114 &11426502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,6 +184,7 @@ MonoBehaviour:
   walkingSpeed: 2
   dashSpeed: 36
   forceMultiplier: 10
+  m_isocamMainCamera: {fileID: 0}
   blockMovement: 0
   isDashing: 0
   moveByForce: 0
@@ -208,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568fb43894ef71b449d36582d2b5e8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Damage: 0
   m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
   StaminaUsage: 0
   m_rigidPlayer: {fileID: 5492902}
@@ -234,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2612fb4eeece77f438c155d9d0547043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Damage: 1
   m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
   StaminaUsage: 0
 --- !u!114 &11488478
@@ -260,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7663d45832a0709418b322a09cd56a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _Damage: 0
   m_goProjectilePrefab: {fileID: 117890, guid: 678e0f5a075b3aa40b6289611ffad364, type: 2}
   StaminaUsage: 0
 --- !u!114 &11492322

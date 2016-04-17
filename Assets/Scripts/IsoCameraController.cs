@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class IsoCameraController : MonoBehaviour 
@@ -23,8 +23,10 @@ public class IsoCameraController : MonoBehaviour
 	{
 		Vector3 v3desiredPosition = (m_rigidPlayer.position + m_v3MovementDirection * m_fVelocityWeigth) + m_v3CameraToPlayerOffset;
 		transform.position = Vector3.Lerp(transform.position, v3desiredPosition, Time.deltaTime * m_fCameraSpeed);
+#if UNITY_EDITOR
 		Debug.DrawLine (m_rigidPlayer.position, m_rigidPlayer.position + m_v3MovementDirection * m_fVelocityWeigth, Color.green);
-		Debug.Log (m_rigidPlayer.velocity);
+#endif
+		//Debug.Log (m_rigidPlayer.velocity);
 	}
 
 	public void SetDirection(Vector3 _v3)
