@@ -37,14 +37,6 @@ public class Projectile : MonoBehaviour, IProjectile {
 				angle = -angle;
 			Quaternion qRotation = Quaternion.Euler (new Vector3 (30.0f, 0.0f, -angle));
 			transform.localRotation = qRotation;
-		} 
-		else
-		{
-			float angle = Vector3.Angle (Vector3.forward, transform.forward);
-			if (transform.forward.x < 0)
-				angle = -angle;
-			Quaternion qRotation = Quaternion.Euler (new Vector3 (30.0f, 0.0f, -angle));
-			transform.localRotation = qRotation;
 		}
 	}
 
