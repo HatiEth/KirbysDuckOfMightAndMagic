@@ -358,6 +358,10 @@ Prefab:
       propertyPath: TargetAcquisition
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 141210, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
   m_IsPrefabParent: 0
