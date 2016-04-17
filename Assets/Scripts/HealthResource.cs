@@ -11,6 +11,7 @@ public class HealthResource : MonoBehaviour {
 	public bool Invulnerable = false;
 	public int Maximum;
 	public int Current { get; private set; }
+	public bool Indestructible = false;
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +37,10 @@ public class HealthResource : MonoBehaviour {
 				DeathCallback();
 			}
 
-			Destroy(gameObject);
+			if(!Indestructible)
+			{
+				Destroy(gameObject);
+			}
 		}
 	}
 	
