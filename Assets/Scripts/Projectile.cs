@@ -7,6 +7,10 @@ public class Projectile : MonoBehaviour, IProjectile {
 	public float LifetimeS = 0f;
 	Rigidbody m_rigidThis;
 
+	public delegate void OnHit ();
+
+	public OnHit hitCallback;
+
 	public int Damage
 	{
 		get	{	return _Damage;	}
@@ -30,11 +34,14 @@ public class Projectile : MonoBehaviour, IProjectile {
 
 	void Update()
 	{
-		float angle = Vector3.Angle(Vector3.forward, m_rigidThis.velocity);
-		if (m_rigidThis.velocity.x < 0)
-			angle = -angle;
-		Quaternion qRotation = Quaternion.Euler(new Vector3(30.0f, 0.0f, -angle));
-		transform.localRotation = qRotation;
+		/*if (m_rigidThis.velocity.magnitude > 0.1)
+		{
+			float angle = Vector3.Angle (Vector3.forward, m_rigidThis.velocity);
+			if (m_rigidThis.velocity.x < 0)
+				angle = -angle;
+			Quaternion qRotation = Quaternion.Euler (new Vector3 (30.0f, 0.0f, -angle));
+			transform.localRotation = qRotation;
+		}*/
 	}
 
 	void OnCollisionEnter(Collision _col)
@@ -45,7 +52,8 @@ public class Projectile : MonoBehaviour, IProjectile {
 			shot.HitMe(this);
 			m_rigidThis.isKinematic = true;
 			m_rigidThis.velocity = Vector3.zero;
-			GameObject.Destroy(this.gameObject);
+			if(hitCallback != null)
+				hitCallback();
 		}
 		else
 		{
@@ -61,7 +69,8 @@ public class Projectile : MonoBehaviour, IProjectile {
 			shot.HitMe(this);
 			m_rigidThis.isKinematic = true;
 			m_rigidThis.velocity = Vector3.zero;
-			GameObject.Destroy(this.gameObject);
+			if(hitCallback != null)
+				hitCallback();
 		}
 		else
 		{

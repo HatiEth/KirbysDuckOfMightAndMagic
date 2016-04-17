@@ -34,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
 		originalCons = playerRigidbody.constraints;
 	}
 
+	void Start() {
+		Quaternion newRotation = Quaternion.LookRotation(movement);
+		//playerRigidbody.MoveRotation(newRotation);
+		transform.GetChild(0).rotation = newRotation;
+	}
+
 	// physics update
 	void FixedUpdate()
 	{	
@@ -55,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 		bool walking = h != 0f || v != 0f;
-		if(onFloor)
+		if(onFloor && !blockMovement)
 		{
 			Move (h, v);
 			Turning (h, v, walking);
