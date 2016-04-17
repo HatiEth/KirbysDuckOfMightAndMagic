@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("fSpeedY", v);
         if(h != 0)
         {
-            sprite.flipX = h < 0;
+            sprite.flipX = h > 0;
         }
 	}
 	

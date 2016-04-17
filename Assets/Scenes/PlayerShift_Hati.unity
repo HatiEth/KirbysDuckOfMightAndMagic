@@ -405,6 +405,11 @@ Prefab:
       propertyPath: m_movementPlayer
       value: 
       objectReference: {fileID: 1142050430}
+    - target: {fileID: 21249308, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c1f797bf84640f46a8d7cc3b3ed8947,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
   m_IsPrefabParent: 0
