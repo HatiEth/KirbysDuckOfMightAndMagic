@@ -46,8 +46,8 @@ public class PlayerShoot : MonoBehaviour
 			{
 				m_shiftmodPlayer.NextState(PlayerShiftModel.State.Bow);
 
-				m_bowAttackThis.Fire ();
 				m_animatorPlayer.SetTrigger ("tAttack");
+				m_bowAttackThis.Fire ();
 			}
 		}
 

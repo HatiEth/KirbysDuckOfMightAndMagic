@@ -4208,6 +4208,10 @@ Prefab:
       propertyPath: m_isocamMainCamera
       value: 
       objectReference: {fileID: 238316198}
+    - target: {fileID: 11463634, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
+      propertyPath: m_animatorPlayer
+      value: 
+      objectReference: {fileID: 1658159119}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
   m_IsPrefabParent: 0
@@ -6042,6 +6046,11 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300004, guid: 48d8e8f0b303feb459858a49219f5c72, type: 3}
+--- !u!95 &1658159119 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9599220, guid: 5880ee6dfcc20084eb8289e80807947d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1142050421}
 --- !u!1001 &1664502622
 Prefab:
   m_ObjectHideFlags: 0
