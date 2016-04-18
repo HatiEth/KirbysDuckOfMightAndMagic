@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
-public class BreadPitt : MonoBehaviour {
+public class BreadPitt : MonoBehaviour, ICanBeShot {
 
     [SerializeField]
     private string playerTag = "player";
@@ -34,5 +34,10 @@ public class BreadPitt : MonoBehaviour {
 
         audio.pitch = Random.Range(0.8f, 1.2f);
         audio.Play();
+    }
+
+    public void HitMe(IProjectile projectile)
+    {
+        Laugh();
     }
 }

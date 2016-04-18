@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IdleBehaviour : MonoBehaviour {
+[RequireComponent(typeof(AudioSource))]
+public class IdleBehaviour : MonoBehaviour, IScareable {
 
+    [SerializeField]
+    private AudioClip scream;
+
+    private new AudioSource audio;
 	private NavMeshAgent agent;
 	public Transform ScaredFrom = null;
 	public Quaternion moveAngle;
@@ -10,6 +15,10 @@ public class IdleBehaviour : MonoBehaviour {
 	Quaternion Angle;
 	BreadMovement movement;
 
+    void Awake()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
 	// Use this for initialization
 	void Start()
@@ -56,5 +65,6 @@ public class IdleBehaviour : MonoBehaviour {
 	public void Scare(Transform t)
 	{
 		ScaredFrom = t;
+        audio.PlayOneShot(scream, 0.5f);
 	}
 }

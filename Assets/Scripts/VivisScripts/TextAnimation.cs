@@ -23,7 +23,7 @@ public class TextAnimation : MonoBehaviour {
     void Update()
     {
         // Skip
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Return)) {
+        if (Input.GetButtonDown("FireSword") || Input.GetKeyDown(KeyCode.Return)) {
             // Load the next Scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class PlayerShiftModel : MonoBehaviour {
 
+    [SerializeField]
+    private AudioClip sfx_shield;
+    private new AudioSource audio;
+
 	public enum State {
 		Default,
 		Sword,
@@ -21,6 +25,7 @@ public class PlayerShiftModel : MonoBehaviour {
 	void Awake()
 	{
 		ShiftState = State.Default;
+        audio = GetComponent<AudioSource>();
 	}
 
 	void Start()
@@ -110,6 +115,7 @@ public class PlayerShiftModel : MonoBehaviour {
 	{
 		anim.SetLayerWeight (3, 1.0f);
 		GetComponent<PlayerCanBeShot>().m_bBlocking = true;
+        audio.PlayOneShot(sfx_shield, 0.3f);
 	}
 
 	#endregion

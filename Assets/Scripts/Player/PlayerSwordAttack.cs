@@ -2,6 +2,14 @@ using UnityEngine;
 using System.Collections;
 
 public class PlayerSwordAttack : ProjectileWeapon {
+
+    [SerializeField]
+    private AudioClip clip_sword;
+    [SerializeField]
+    private float clip_volume;
+
+    private new AudioSource audio;
+
 	private GameObject m_goActiveSlash;
 	private Rigidbody m_rigidActiveSlash;
 	public bool m_bIsSlashing { get; private set; }
@@ -9,9 +17,12 @@ public class PlayerSwordAttack : ProjectileWeapon {
 	private float m_fSlashTimer = 0.05f;
 	private float m_fSlashWidth = 1.0f;
 	private int m_iNumSlashSteps = 3;
+
 	// Use this for initialization
 	protected override void Start()
 	{
+        audio = GetComponent<AudioSource>();
+
 		base.Start();
 		m_fShotPower = 0.0f;
 		m_fDestroyDelay = 0.2f;
@@ -19,6 +30,8 @@ public class PlayerSwordAttack : ProjectileWeapon {
 
 	public override bool Fire()
 	{
+        audio.PlayOneShot(clip_sword, clip_volume);
+
 		Debug.Log("Slash Attack");
 		m_goActiveSlash = GameObject.Instantiate(m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_rigidActiveSlash = m_goActiveSlash.GetComponent<Rigidbody>();

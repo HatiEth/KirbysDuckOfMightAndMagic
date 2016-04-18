@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.Return)) {
+        if (Input.GetButtonDown("FireSword") || Input.GetKeyDown(KeyCode.Return)) {
             if (!credits) {
                 switch (selector) {
                     case 0: SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); break;

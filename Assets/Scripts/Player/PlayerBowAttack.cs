@@ -3,6 +3,13 @@ using System.Collections;
 
 public class PlayerBowAttack : ProjectileWeapon
 {
+    [SerializeField]
+    private AudioClip clip_bow;
+    [SerializeField]
+    private float clip_volume;
+
+    private new AudioSource audio;
+
 	private GameObject m_goActiveArrow;
 	private Rigidbody m_rigidActiveArrow;
 	public bool m_bIsShooting { get; private set;}
@@ -15,6 +22,7 @@ public class PlayerBowAttack : ProjectileWeapon
 	protected override void Start () 
 	{
 		base.Start ();
+        audio = GetComponent<AudioSource>();
 		m_fDestroyDelay = 0.75f;
 	}
 
@@ -25,6 +33,7 @@ public class PlayerBowAttack : ProjectileWeapon
 			return false;
 		}
 		Debug.Log ("Fire Arrow");
+        audio.PlayOneShot(clip_bow, clip_volume);
 		m_goActiveArrow = GameObject.Instantiate (m_goProjectilePrefab, transform.position, transform.rotation) as GameObject;
 		m_rigidActiveArrow = m_goActiveArrow.GetComponent<Rigidbody> ();
 		m_bIsShooting = true;
