@@ -321,6 +321,10 @@ Prefab:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11469794, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
+      propertyPath: fRespawnDelayS
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5880ee6dfcc20084eb8289e80807947d, type: 2}
   m_IsPrefabParent: 0

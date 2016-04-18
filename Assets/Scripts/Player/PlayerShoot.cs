@@ -27,12 +27,12 @@ public class PlayerShoot : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButtonDown ("FireShield"))
+		 if ( !((Health && Health.Invulnerable)) && Input.GetButtonDown ("FireShield"))
 		{
 			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Shield);
 		} 
 
-		else if (Input.GetButtonDown ("FireBow"))
+		else if ( !((Health && Health.Invulnerable)) && Input.GetButtonDown ("FireBow"))
 		{
 			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Bow);
 
@@ -46,7 +46,7 @@ public class PlayerShoot : MonoBehaviour
 			}
 		}
 
-		else if (Input.GetButtonDown ("FireSword"))
+		else if (!((Health && Health.Invulnerable)) && Input.GetButtonDown ("FireSword"))
 		{
 			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Sword);
 			if (!m_swordAttackThis.m_bIsSlashing)
