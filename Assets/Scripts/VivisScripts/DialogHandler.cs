@@ -30,7 +30,7 @@ public class DialogHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // Press Space
-        if (Input.GetKeyDown(KeyCode.Space) && IN_DIALOG) {
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("FireSword")) && IN_DIALOG) {
             if (dialogPanel.Skip()) {
                 // text is done: next one!
                 NextDialog();

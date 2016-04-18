@@ -18,3 +18,23 @@ AnimatorOverrideController:
     m_OverrideClip: {fileID: 7400000, guid: 8189ef1e7e0acb7409e97986032e0120, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 17f12d6abe44e6a46ba695232936a58b, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 2bf4d83694139534783b280e3c5356ed, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4bbe686ac2bdd504e943220522a02fc1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 300c5ac88073c834da919a2c59174277, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4bcbfd87f790a554a889834e27ab29b4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ffe9893c2ea2c9d4bb7e3069bc7f863b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5815e09f422db8d4f84e27084ae731a8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 200b9d728e5fb47489431b54683c16d4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ec91925279eec0742980a740371e69e3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ec91925279eec0742980a740371e69e3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f4b4ed57f5a59ac4881848fd9bf962bc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f4b4ed57f5a59ac4881848fd9bf962bc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9b36c8367612cc348ae476800e5b7366, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9b36c8367612cc348ae476800e5b7366, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 035923d80ab67b74186adcb69c09f963, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 035923d80ab67b74186adcb69c09f963, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d273c8171d8fdca4cba891e41e2d813a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d273c8171d8fdca4cba891e41e2d813a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4f57ae1d865c40041b2f7f0e4063822e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f57ae1d865c40041b2f7f0e4063822e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c2d1055df1084ea41b51acb0068c9208, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c2d1055df1084ea41b51acb0068c9208, type: 2}

@@ -21,10 +21,15 @@ public class BreadPitt : MonoBehaviour, ICanBeShot {
             return;
 
         if (c.CompareTag(playerTag)) {
-            DialogHandler.instance.StartDialog(Dialogs.bradPittDialog);
+			
+			Invoke ("StartTalk", 0.5f);
             triggered = true;
         }
     }
+
+	void StartTalk(){
+		DialogHandler.instance.StartDialog(Dialogs.bradPittDialog);
+	}
 
     // CALL THIS ON IgotHit
     public void Laugh()
