@@ -99,14 +99,18 @@ public class PlayerMovement : MonoBehaviour
 
 	void Animating (float h, float v, bool walking)
 	{
-        //anim.SetFloat ("fSpeed", Mathf.Abs(h)+Mathf.Abs(v));
-        anim.SetBool("bWalk", walking);
-        anim.SetFloat("fSpeedX", h);
-        anim.SetFloat("fSpeedY", v);
-        if(h != 0)
-        {
-            sprite.flipX = h > 0;
-        }
+		anim.SetBool("bWalk", walking);
+
+		if(h != 0f || v != 0f)
+		{
+			anim.SetFloat("fSpeedX", h);
+			anim.SetFloat("fSpeedY", v);
+			if(h != 0)
+			{
+					sprite.flipX = h > 0;
+			}
+		}
+
 	}
 	
 	bool getKnockdown()

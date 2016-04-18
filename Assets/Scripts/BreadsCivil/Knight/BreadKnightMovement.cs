@@ -42,6 +42,7 @@ public class BreadKnightMovement : MonoBehaviour{
 
 	public void Attack(Vector3 dir)
 	{
+		anim.SetTrigger("tAttack");
 		dir.y = 0f;
 		Weapon.transform.forward = dir;
 

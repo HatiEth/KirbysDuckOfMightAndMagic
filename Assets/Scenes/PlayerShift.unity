@@ -1484,6 +1484,24 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 0}
+--- !u!1 &321156138 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 141210, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+  m_PrefabInternal: {fileID: 1671288896}
+--- !u!114 &321156139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321156138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a828d8a8da7e34aa6f30209bfd7bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drops: []
+  Max: 3
+  DropChance: 0.1
 --- !u!1 &332657258 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 48d8e8f0b303feb459858a49219f5c72, type: 3}
@@ -2342,6 +2360,7 @@ Transform:
   - {fileID: 209438326}
   - {fileID: 2143701241}
   - {fileID: 905320904}
+  - {fileID: 1350230800}
   m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!1001 &588907354
@@ -2590,7 +2609,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 7dbe5d7b5b39eb647a7e01222a521fec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d36753c621d6e2b488898e31996b4cb8, type: 2}
+      objectReference: {fileID: 2100000, guid: 33841d22b3f746948a46a99a62c763ac, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dbe5d7b5b39eb647a7e01222a521fec, type: 3}
   m_IsPrefabParent: 0
@@ -5020,6 +5039,56 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 0}
+--- !u!1001 &1350230799
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 587122885}
+    m_Modifications:
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.4951673
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 9.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 141210, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_Name
+      value: BreadKnight (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1350230800 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 412158, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+  m_PrefabInternal: {fileID: 1350230799}
 --- !u!1 &1354321092 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 48d8e8f0b303feb459858a49219f5c72, type: 3}
@@ -6061,23 +6130,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11435574, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
-      propertyPath: Max
-      value: 10
+    - target: {fileID: 141210, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
+      propertyPath: m_Name
+      value: BreadKnight (1)
       objectReference: {fileID: 0}
     - target: {fileID: 141210, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 19515014, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
-      propertyPath: m_BaseOffset
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 141210, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
-      propertyPath: m_Name
-      value: BreadKnight (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 4c221e1995c894c47ba0cc0659cea55c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1673148954

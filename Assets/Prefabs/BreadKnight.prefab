@@ -49,6 +49,7 @@ GameObject:
   - 114: {fileID: 11442530}
   - 114: {fileID: 11431868}
   - 114: {fileID: 11435574}
+  - 114: {fileID: 11445946}
   m_Layer: 9
   m_Name: BreadKnight
   m_TagString: Untagged
@@ -122,11 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0580ccdfd01a51249aeb2ecced29cea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_goProjectilePrefab: {fileID: 182656, guid: 3f1c673fe37167240a0369b75fed2704, type: 2}
+  m_goProjectilePrefab: {fileID: 0}
   StaminaUsage: 0
-  BulletDeviation: 21
-  Bullets: 5
-  BulletDelay: 0.016
+  BulletDeviation: 0
+  Bullets: 0
+  BulletDelay: 0.3
   AttackTimeS: 3
   spawnAnchor: {fileID: 0}
 --- !u!114 &11424904
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invulnerable: 0
-  Maximum: 4
+  Maximum: 0
   Indestructible: 0
 --- !u!114 &11435574
 MonoBehaviour:
@@ -166,10 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f032f390942836c418d1f591811c6530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Drops:
-  - {fileID: 158296, guid: acaa2cfe42e7fac4f98a2304235d92d5, type: 2}
-  Max: 10
-  DropChance: 0.25
+  Drops: []
+  Max: 3
+  DropChance: 0.1
 --- !u!114 &11442530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,8 +181,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912843514ad42ee4287253334e2b206a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max: 100
-  RegenPerSecond: 5
+  Max: 0
+  RegenPerSecond: 1
+--- !u!114 &11445946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a828d8a8da7e34aa6f30209bfd7bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drops:
+  - {fileID: 144602, guid: ae03045dded885a42a27654ce44784c0, type: 2}
+  Max: 1
+  DropChance: 1
 --- !u!114 &11477202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,8 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Alarmed: 0
-  TargetAcquisition: 0.05
+  TargetAcquisition: 0.1
   AttackChance: 0.33
+  moveAngle: {x: 0, y: 0, z: 0, w: 0}
 --- !u!135 &13555906
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -227,7 +243,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141210}
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Speed: 1
   m_Acceleration: 3
   avoidancePriority: 50

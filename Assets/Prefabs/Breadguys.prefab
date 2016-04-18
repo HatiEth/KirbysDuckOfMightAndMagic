@@ -18,6 +18,7 @@ GameObject:
   - 114: {fileID: 11453280}
   - 114: {fileID: 11420674}
   - 195: {fileID: 19582184}
+  - 114: {fileID: 11407086}
   m_Layer: 9
   m_Name: Breadguys
   m_TagString: Untagged
@@ -69,6 +70,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11407086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a828d8a8da7e34aa6f30209bfd7bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drops:
+  - {fileID: 144602, guid: ae03045dded885a42a27654ce44784c0, type: 2}
+  Max: 1
+  DropChance: 1
 --- !u!114 &11420674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invulnerable: 0
-  Maximum: 1
+  Maximum: 0
   Indestructible: 0
 --- !u!114 &11427606
 MonoBehaviour:
@@ -118,10 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f032f390942836c418d1f591811c6530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Drops:
-  - {fileID: 158296, guid: acaa2cfe42e7fac4f98a2304235d92d5, type: 2}
+  Drops: []
   Max: 3
-  DropChance: 0.3
+  DropChance: 0.1
 --- !u!114 &11465552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b0473e6de519e4ea77784323495934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.3
+  Speed: 1
   moveByForce: 0
   forceMultiplier: 1
 --- !u!136 &13658488
