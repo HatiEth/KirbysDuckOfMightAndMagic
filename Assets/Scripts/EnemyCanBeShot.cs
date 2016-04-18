@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyCanBeShot : MonoBehaviour, ICanBeShot
 {
+	
 	public virtual void HitMe(IProjectile projectile)
 	{
 		HealthResource hc = GetComponent<HealthResource>();
@@ -10,9 +11,7 @@ public class EnemyCanBeShot : MonoBehaviour, ICanBeShot
 		{
 			hc.Take(projectile.Damage);
 		}
-		else
-		{
-			GameObject.Destroy (this.gameObject);
-		}
 	}
+
+
 }

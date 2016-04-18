@@ -65,6 +65,6 @@ public class IdleBehaviour : MonoBehaviour, IScareable {
 	public void Scare(Transform t)
 	{
 		ScaredFrom = t;
-        audio.PlayOneShot(scream, 0.5f);
+        audio.PlayOneShot(scream, 0.2f);
 	}
 }

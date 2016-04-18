@@ -15,7 +15,8 @@ public class HealthResource : MonoBehaviour {
 	public int Maximum;
 	public int Current { get; private set; }
 	public bool Indestructible = false;
-
+	private bool hasDied = false;
+	public Animator m_animThis;
 	// Use this for initialization
 	void Start () {
 		Current = Maximum;
@@ -51,9 +52,29 @@ public class HealthResource : MonoBehaviour {
 
 			if(!Indestructible)
 			{
-				Destroy(gameObject);
+				StartCoroutine (DieAfterAnim ());
 			}
 		}
 	}
-	
+
+	private IEnumerator DieAfterAnim()
+	{
+		if (m_animThis)
+		{
+			if (!hasDied)
+			{
+				hasDied = true;
+				Debug.Log ("Die");
+				m_animThis.SetTrigger ("tDie");
+				yield return new WaitForSeconds (2.0f);
+				GameObject.Destroy (this.gameObject);	
+			}
+
+		} 
+		else
+		{
+			GameObject.Destroy (this.gameObject);
+
+		}
+	}
 }

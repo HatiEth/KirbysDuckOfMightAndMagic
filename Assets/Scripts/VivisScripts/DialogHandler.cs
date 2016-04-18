@@ -138,7 +138,7 @@ public class Dialogs
 
     public static DialogLine[] breadDialog = new DialogLine[]{
         new DialogLine(DialogSprites.breadString, new string[]{
-            "Ente gut, alles gut."
+            "Ente gut, alles gut. The End!"
         })
     };
 }

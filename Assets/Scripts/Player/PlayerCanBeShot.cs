@@ -4,9 +4,11 @@ using System.Collections;
 public class PlayerCanBeShot: MonoBehaviour, ICanBeShot
 {
 	public bool m_bBlocking = false;
+	private new AudioSource audio;
 
-	void Start()
+	void Awake()
 	{
+		audio = GetComponent<AudioSource> ();
 	}
 
 	public virtual void HitMe(IProjectile projectile)
@@ -19,6 +21,8 @@ public class PlayerCanBeShot: MonoBehaviour, ICanBeShot
 		{
 			HealthResource hc = GetComponent<HealthResource>();
 			hc.Take(projectile.Damage);
+			if (!audio.isPlaying)
+				audio.Play ();
 		}
 	}
 }
