@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 534b4751f30ddb5478f4b7775b147fc1
+timeCreated: 1460994355
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: brot_attack_vorne_0
+    21300002: brot_attack_vorne_1
+    21300004: brot_attack_vorne_2
+    21300006: brot_attack_vorne_3
+    21300008: brot_attack_vorne_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 600
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: brot_attack_vorne_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 838
+        width: 186
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 6}
+        - {x: 42, y: -2}
+        - {x: 42, y: 5}
+        - {x: 51, y: 30}
+        - {x: 54, y: 39}
+        - {x: 56, y: 71}
+        - {x: 45, y: 86}
+        - {x: 12, y: 93}
+        - {x: -36, y: 93}
+        - {x: -53, y: 84}
+        - {x: -53, y: -26}
+        - {x: -35, y: -87}
+        - {x: -32, y: -87}
+        - {x: 14, y: -70}
+        - {x: 15, y: -67}
+        - {x: 15, y: -64}
+        - {x: 20, y: -87}
+        - {x: 27, y: -87}
+        - {x: 31, y: -86}
+        - {x: 73, y: -12}
+        - {x: 73, y: 12}
+        - {x: 51, y: 20}
+    - name: brot_attack_vorne_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 838
+        width: 186
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 93}
+        - {x: -53, y: 78}
+        - {x: -53, y: -18}
+        - {x: -39, y: -82}
+        - {x: -12, y: -93}
+        - {x: 23, y: -93}
+        - {x: 54, y: -18}
+        - {x: 54, y: 93}
+    - name: brot_attack_vorne_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 838
+        width: 186
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: 81}
+        - {x: 25, y: 93}
+        - {x: -45, y: 93}
+        - {x: -74, y: 35}
+        - {x: -74, y: -29}
+        - {x: -67, y: -49}
+        - {x: -40, y: -54}
+        - {x: -39, y: -51}
+        - {x: -40, y: -47}
+        - {x: -36, y: -30}
+        - {x: -36, y: -26}
+        - {x: -37, y: -21}
+        - {x: -37, y: -24}
+        - {x: -35, y: -28}
+        - {x: -36, y: -40}
+        - {x: -24, y: -68}
+        - {x: -20, y: -69}
+        - {x: 15, y: -69}
+        - {x: 33, y: -51}
+        - {x: 54, y: 31}
+    - name: brot_attack_vorne_3
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 838
+        width: 186
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 93}
+        - {x: -53, y: 78}
+        - {x: -53, y: -18}
+        - {x: -39, y: -82}
+        - {x: -12, y: -93}
+        - {x: 23, y: -93}
+        - {x: 54, y: -18}
+        - {x: 54, y: 93}
+    - name: brot_attack_vorne_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 838
+        width: 186
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 6}
+        - {x: 42, y: -2}
+        - {x: 42, y: 5}
+        - {x: 51, y: 30}
+        - {x: 54, y: 39}
+        - {x: 56, y: 71}
+        - {x: 45, y: 86}
+        - {x: 12, y: 93}
+        - {x: -36, y: 93}
+        - {x: -53, y: 84}
+        - {x: -53, y: -26}
+        - {x: -35, y: -87}
+        - {x: -32, y: -87}
+        - {x: 14, y: -70}
+        - {x: 15, y: -67}
+        - {x: 15, y: -64}
+        - {x: 20, y: -87}
+        - {x: 27, y: -87}
+        - {x: 31, y: -86}
+        - {x: 73, y: -12}
+        - {x: 73, y: 12}
+        - {x: 51, y: 20}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
