@@ -27,7 +27,7 @@ public class BreadKnightMovement : MonoBehaviour{
 		anim.SetFloat("fSpeedY", v, 0.1f, Time.deltaTime);
 		if(h != 0)
 		{
-				sprite.flipX = h < 0;
+				//sprite.flipX = h < 0;
 		}
 	}
 	void Update()

@@ -62,7 +62,6 @@ GameObject:
   - 114: {fileID: 11426502}
   - 54: {fileID: 5492902}
   - 135: {fileID: 13524500}
-  - 114: {fileID: 11429988}
   - 114: {fileID: 11445992}
   - 114: {fileID: 11492322}
   - 114: {fileID: 11488478}
@@ -121,8 +120,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.055, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.224, y: 1.055, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 410732}
   - {fileID: 461278}
@@ -203,17 +202,6 @@ MonoBehaviour:
   blockMovement: 0
   isDashing: 0
   moveByForce: 0
---- !u!114 &11429988
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67072929639dbcd49beac268011fb93c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11445992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
-  StaminaUsage: 0
+  StaminaUsage: 80
   m_rigidPlayer: {fileID: 5492902}
   m_fBowChargeTime: 0.5
 --- !u!114 &11463634
@@ -321,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_goProjectilePrefab: {fileID: 117890, guid: 678e0f5a075b3aa40b6289611ffad364, type: 2}
-  StaminaUsage: 0
+  StaminaUsage: 20
 --- !u!114 &11492322
 MonoBehaviour:
   m_ObjectHideFlags: 1
