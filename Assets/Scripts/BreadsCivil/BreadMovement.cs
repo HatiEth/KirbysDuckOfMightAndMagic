@@ -32,7 +32,7 @@ public class BreadMovement : MonoBehaviour {
 		anim.SetFloat("fSpeedY", v);
 		if(h != 0)
 		{
-				sprite.flipX = h < 0;
+				sprite.flipX = h > 0;
 		}
 
 		movement.Set (h, 0f, v);

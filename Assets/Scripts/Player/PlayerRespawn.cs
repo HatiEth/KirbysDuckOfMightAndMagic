@@ -22,7 +22,6 @@ public class PlayerRespawn : MonoBehaviour {
 
 
 		Health.DeathCallback += () => {
-			Debug.Log("Respawn");
 			StartCoroutine(Respawn());
 		};
 	}
