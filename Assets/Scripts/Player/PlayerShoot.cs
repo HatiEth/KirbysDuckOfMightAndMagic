@@ -14,6 +14,8 @@ public class PlayerShoot : MonoBehaviour
 	private HealthResource Health;
 	[SerializeField]
 	private StaminaResource Stamina;
+	[SerializeField]
+	private Animator m_animatorPlayer;
 
 	private bool m_bHasShoot = true;
 	private bool m_bHasSlash = true;
@@ -45,6 +47,7 @@ public class PlayerShoot : MonoBehaviour
 				m_shiftmodPlayer.NextState(PlayerShiftModel.State.Bow);
 
 				m_bowAttackThis.Fire ();
+				m_animatorPlayer.SetTrigger ("tAttack");
 			}
 		}
 
@@ -54,7 +57,10 @@ public class PlayerShoot : MonoBehaviour
 			{
 				m_shiftmodPlayer.NextState (PlayerShiftModel.State.Sword);
 				if (!m_swordAttackThis.m_bIsSlashing)
+				{
 					m_swordAttackThis.Fire ();
+					m_animatorPlayer.SetTrigger ("tAttack");
+				}
 				m_bHasSlash = false;
 			}
 		} 

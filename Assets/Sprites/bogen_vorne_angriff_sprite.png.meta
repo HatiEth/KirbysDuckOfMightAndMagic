@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: eb0d0f109d67db34493ae97046b9fcc9
-timeCreated: 1460969393
+timeCreated: 1461007812
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: bogen_vorne_angriff_sprite_0
+    21300002: bogen_vorne_angriff_sprite_1
+    21300004: bogen_vorne_angriff_sprite_2
+    21300006: bogen_vorne_angriff_sprite_3
+    21300008: bogen_vorne_angriff_sprite_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +35,113 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 500
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: bogen_vorne_angriff_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 350
+        width: 158
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 81}
+        - {x: -27, y: -81}
+        - {x: 7, y: -81}
+        - {x: 7, y: 81}
+    - name: bogen_vorne_angriff_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 350
+        width: 158
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 81}
+        - {x: -25, y: 63}
+        - {x: -25, y: -68}
+        - {x: -22, y: -76}
+        - {x: -15, y: -81}
+        - {x: 9, y: -81}
+        - {x: 9, y: 81}
+    - name: bogen_vorne_angriff_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 350
+        width: 158
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 81}
+        - {x: -23, y: 56}
+        - {x: -23, y: -66}
+        - {x: -22, y: -81}
+        - {x: 11, y: -81}
+        - {x: 11, y: 44}
+        - {x: 10, y: 81}
+    - name: bogen_vorne_angriff_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 188
+        width: 158
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 81}
+        - {x: -27, y: 61}
+        - {x: -27, y: -62}
+        - {x: -19, y: -79}
+        - {x: 7, y: -79}
+        - {x: 7, y: 61}
+        - {x: 1, y: 81}
+    - name: bogen_vorne_angriff_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 188
+        width: 158
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 81}
+        - {x: -15, y: 63}
+        - {x: -15, y: -78}
+        - {x: -13, y: -79}
+        - {x: 9, y: -79}
+        - {x: 9, y: -22}
+        - {x: 4, y: 81}
     outline: []
   spritePackingTag: 
   userData: 
