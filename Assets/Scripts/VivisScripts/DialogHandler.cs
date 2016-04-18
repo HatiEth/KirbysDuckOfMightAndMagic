@@ -138,8 +138,7 @@ public class Dialogs
 
     public static DialogLine[] breadDialog = new DialogLine[]{
         new DialogLine(DialogSprites.breadString, new string[]{
-            "Was tust du da, Ente?! Du hast meinen besten Freund getötet!",
-            "Soldaten!!! TÖTET DIESE ENTE!"
+            "Ente gut, alles gut."
         })
     };
 }
