@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class DialogHandler : MonoBehaviour {
 
     public static bool IN_DIALOG = false;
+    public static DialogHandler instance = null;
 
     DialogLine[] dialog;
     DialogPanel dialogPanel;
@@ -17,20 +18,17 @@ public class DialogHandler : MonoBehaviour {
 
     void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         dialogPanel = GetComponent<DialogPanel>();
-        dialog = Dialogs.startingDialog;
         skipObj = transform.GetChild(2).GetComponent<Text>();
     }
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.A) && !IN_DIALOG) {
-            IN_DIALOG = true;
-            dialogCounter = 0;
-            lineCounter = 0;
-            NextDialog();
-        }
-
         // Press Space
         if (Input.GetKeyDown(KeyCode.Space) && IN_DIALOG) {
             if (dialogPanel.Skip()) {
@@ -70,6 +68,7 @@ public class DialogHandler : MonoBehaviour {
             else {
                 dialogPanel.ShowPanel(false);
                 IN_DIALOG = false;
+                Time.timeScale = 1f;
             }
         }
 
@@ -80,6 +79,19 @@ public class DialogHandler : MonoBehaviour {
     void ShowSkip(bool b)
     {
         skipObj.enabled = b;
+    }
+
+    public void StartDialog(DialogLine[] d)
+    {
+        if (IN_DIALOG)
+            return;
+
+        dialog = d;
+        IN_DIALOG = true;
+        Time.timeScale = 0f;
+        dialogCounter = 0;
+        lineCounter = 0;
+        NextDialog();
     }
 }
 
@@ -96,7 +108,7 @@ public class DialogLine
 
 public class Dialogs
 {
-    public static DialogLine[] startingDialog = new DialogLine[]{
+    public static DialogLine[] firstDialogDuckAndKirby = new DialogLine[]{
         new DialogLine(DialogSprites.sorcererString, new string[]{"Willkommen, kleine Ente!"}),
         new DialogLine(DialogSprites.duckString, new string[]{
             "Sei gegruesst, grosser Entenzauberer. Ich hoffe du hast mich eingeladen, um mir im Kampf gegen das verquackte Brot zu helfen!",
@@ -107,10 +119,27 @@ public class Dialogs
             "und werde dir daher meine unterstuetzende Zauberkraft mit auf den Weg geben. "}),
     };
 
-    public static DialogLine[] secondDialog = new DialogLine[]{
+    public static DialogLine[] secondDialogDuckAndKirby = new DialogLine[]{
         new DialogLine(DialogSprites.sorcererString, new string[]{
             "Mit all meiner Macht vermag ich dir..",
-            "die Stärke des Schwertes, die Schnelligkeit des Pfeiles und die Standhaftigkeit des Schildes einzuverleiben."
+            "die Staerke des Schwertes, die Schnelligkeit des Pfeiles und die Standhaftigkeit des Schildes einzuverleiben."
         }),
+    };
+
+    public static DialogLine[] bradPittDialog = new DialogLine[]{
+        new DialogLine(DialogSprites.bradString, new string[]{
+            "Hi!",
+            "Ich bin...",
+            "Bread Pitt.",
+            "HAHAHA HAHAH AHAHHA AHAHAHAH AAHHAHAHAH HAHAHA HAHAHA HAHAH AHAHHA AHAHAHAH AAHHAHAHAH HAHAHA HAHAHA HAHAH AHAHHA AHAHAHAH AAHHAHAHAH",
+            "..."
+        })
+    };
+
+    public static DialogLine[] breadDialog = new DialogLine[]{
+        new DialogLine(DialogSprites.breadString, new string[]{
+            "Was tust du da, Ente?! Du hast meinen besten Freund getötet!",
+            "Soldaten!!! TÖTET DIESE ENTE!"
+        })
     };
 }

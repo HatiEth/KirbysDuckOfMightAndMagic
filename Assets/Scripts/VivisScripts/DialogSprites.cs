@@ -8,13 +8,16 @@ public class DialogSprites : MonoBehaviour {
     public static string duckString = "duck";
     public static string sorcererString = "sorcerer";
     public static string breadString = "bread";
+    public static string bradString = "brad";
 
     public Sprite duckSprite;
     public Sprite sorcererSprite;
     public Sprite breadSprite;
+    public Sprite bradSprite;
     public AudioClip duckClip;
     public AudioClip sorcererClip;
     public AudioClip breadClip;
+    public AudioClip bradClip;
 
     void Awake()
     {
@@ -39,6 +42,10 @@ public class DialogSprites : MonoBehaviour {
             case "bread":
                 sprite = breadSprite;
                 audio = new DialogAudio(breadClip, 0.4f, 0.9f);
+                break;
+            case "brad":
+                sprite = bradSprite;
+                audio = new DialogAudio(bradClip, 0.8f, 1.2f);
                 break;
             default:
                 sprite = duckSprite;

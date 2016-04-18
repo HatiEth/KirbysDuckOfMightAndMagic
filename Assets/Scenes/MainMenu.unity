@@ -953,7 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502b10922bea9b341a2bf760e5dc253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSize: 16
+  defaultSize: 15
   defaultWidth: 578
 --- !u!114 &1112144424
 MonoBehaviour:
@@ -1006,7 +1006,9 @@ MonoBehaviour:
 
     Special Thanks to
 
-    Vanessa @hatNenBarth
+    Vanessa @starwarsIntro
+
+    Kevin McLeod @mostOfTheMusic
 
     Bread Pitt @EinStein'
 --- !u!222 &1112144425

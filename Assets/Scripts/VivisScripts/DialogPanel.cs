@@ -107,7 +107,7 @@ public class DialogPanel : MonoBehaviour {
             else
                 m_textThis.text += "\n";
 
-            yield return new WaitForSeconds(m_fLetterPause);
+            yield return StartCoroutine(CoroutineUtilities.WaitForRealTime(m_fLetterPause));
         }
         m_bIsTyping = false;
     }
