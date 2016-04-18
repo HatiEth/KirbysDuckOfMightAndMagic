@@ -112,13 +112,13 @@ public class BreadKnightBehaviour : MonoBehaviour, IScareable {
 	public void Scare(Transform t)
 	{
 		Alarmed = true;
-
+		TargetPosition = t.position;
 		StartCoroutine(AlarmAway());
 	}
 
 	IEnumerator AlarmAway()
 	{
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(20f);
 		Alarmed = false;
 	}
 }

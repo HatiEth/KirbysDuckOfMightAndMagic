@@ -15,10 +15,10 @@ GameObject:
   - 54: {fileID: 5446092}
   - 136: {fileID: 13658488}
   - 114: {fileID: 11445966}
-  - 114: {fileID: 11453280}
   - 114: {fileID: 11420674}
   - 195: {fileID: 19582184}
   - 114: {fileID: 11407086}
+  - 114: {fileID: 11439106}
   m_Layer: 9
   m_Name: Breadguys
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 188384}
   m_LocalRotation: {x: 0.25881907, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: -4.394, y: -3.3611674, z: -3.358}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.4951313, y: 2.495131, z: 2.495131}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invulnerable: 0
-  Maximum: 0
+  Maximum: 1
   Indestructible: 0
 --- !u!114 &11427606
 MonoBehaviour:
@@ -112,6 +112,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScaredFrom: {fileID: 0}
   moveAngle: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &11439106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f032f390942836c418d1f591811c6530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drops:
+  - {fileID: 158296, guid: acaa2cfe42e7fac4f98a2304235d92d5, type: 2}
+  Max: 1
+  DropChance: 0.25
 --- !u!114 &11445966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,20 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0846a6bcff2404a936ad9cb2b43393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11453280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f032f390942836c418d1f591811c6530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Drops: []
-  Max: 3
-  DropChance: 0.1
 --- !u!114 &11465552
 MonoBehaviour:
   m_ObjectHideFlags: 1

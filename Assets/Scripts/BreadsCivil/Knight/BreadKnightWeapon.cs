@@ -18,7 +18,6 @@ public class BreadKnightWeapon : ProjectileWeapon {
 	
 	
 
-	public Transform spawnAnchor;
 
 	void Update()
 	{
