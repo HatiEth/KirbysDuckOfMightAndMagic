@@ -13,6 +13,9 @@ public class PlayerShiftModel : MonoBehaviour {
 	public float ShiftDuration = 1f;
 	public State ShiftState { get; private set; }
 
+	StaminaResource Stamina;
+	public float StaminaShieldPerFrame = 10.5f;
+
 	private Animator anim;
 
 	void Awake()
@@ -23,7 +26,21 @@ public class PlayerShiftModel : MonoBehaviour {
 	void Start()
 	{
 		anim = transform.Find("PlayerSprite").GetComponent<Animator>();
+		Stamina = GetComponent<StaminaResource>();
 	}
+
+	void Update()
+	{
+		if(ShiftState == State.Shield)
+		{
+			if(!Stamina.Use(StaminaShieldPerFrame*Time.deltaTime))
+			{
+				NextState(State.Default);
+			}
+		}
+
+	}
+
 
 	public void NextState(State newState)
 	{

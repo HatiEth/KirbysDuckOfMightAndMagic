@@ -12,6 +12,8 @@ public class PlayerShoot : MonoBehaviour
 	private PlayerMovement m_movementPlayer;
 	[SerializeField]
 	private HealthResource Health;
+	[SerializeField]
+	private StaminaResource Stamina;
 
 	private bool m_bHasShoot = true;
 	private bool m_bHasSlash = true;
@@ -34,24 +36,27 @@ public class PlayerShoot : MonoBehaviour
 
 		else if ( !((Health && Health.Invulnerable)) && Input.GetButtonDown ("FireBow"))
 		{
-			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Bow);
-
 			if (m_bowAttackThis.m_bIsShooting)
 			{
 				m_bowAttackThis.Teleport ();
 			} 
-			else
+			else if(Stamina.Use(m_bowAttackThis.StaminaUsage))
 			{
+				m_shiftmodPlayer.NextState(PlayerShiftModel.State.Bow);
+
 				m_bowAttackThis.Fire ();
 			}
 		}
 
 		else if (!((Health && Health.Invulnerable)) && Input.GetButtonDown ("FireSword"))
 		{
-			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Sword);
-			if (!m_swordAttackThis.m_bIsSlashing)
-				m_swordAttackThis.Fire ();
-			m_bHasSlash = false;
+			if(Stamina.Use(m_swordAttackThis.StaminaUsage))
+			{
+				m_shiftmodPlayer.NextState (PlayerShiftModel.State.Sword);
+				if (!m_swordAttackThis.m_bIsSlashing)
+					m_swordAttackThis.Fire ();
+				m_bHasSlash = false;
+			}
 		} 
 
 		else if (m_shiftmodPlayer.ShiftState == PlayerShiftModel.State.Sword && !m_swordAttackThis.m_bIsSlashing)
@@ -66,7 +71,7 @@ public class PlayerShoot : MonoBehaviour
 
 		else if(Input.GetButtonUp("FireShield"))
 		{
-			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Default);	
+			m_shiftmodPlayer.NextState (PlayerShiftModel.State.Default);
 		}
 
 		if (m_shiftmodPlayer.ShiftState != PlayerShiftModel.State.Default)

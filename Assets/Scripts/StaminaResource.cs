@@ -18,9 +18,11 @@ public class StaminaResource : MonoBehaviour {
 		Current = Mathf.Min(Current + RegenPerSecond*Time.deltaTime, Max);
 	}
 
-	public void Use(float stamina)
+	public bool Use(float stamina)
 	{
+		if (Current < stamina) return false;
 		Current -= stamina;
 		Current = Mathf.Max(Current, 0);
+		return true;
 	}
 }

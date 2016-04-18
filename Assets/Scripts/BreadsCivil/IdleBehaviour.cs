@@ -29,7 +29,6 @@ public class IdleBehaviour : MonoBehaviour {
 		moveAngle = Angle * Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
 		Angle = Quaternion.Slerp(Angle, moveAngle, Time.deltaTime);
 		Vector3 v = Angle * new Vector3(1, 0, 0);
-		Debug.Log(v);
 		if(!ScaredFrom)
 		{
 			agent.SetDestination(transform.position + v);

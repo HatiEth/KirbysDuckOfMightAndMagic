@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HealthUI : MonoBehaviour 
 {
 	[SerializeField]
-	private HealthResource health; 
+	private StaminaResource health; 
 
 	private Text text;
 	void Start()
@@ -16,7 +16,7 @@ public class HealthUI : MonoBehaviour
 	{
 		if (health)
 		{
-			text.text = "PlayerHealth:" + health.Current;
+			text.text = "Stamina:" + health.Current;
 		}
 	}
 }

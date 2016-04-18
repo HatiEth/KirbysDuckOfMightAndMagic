@@ -9,6 +9,9 @@ public class HealthResource : MonoBehaviour {
 	public OnDeath DeathCallback;
 
 	public bool Invulnerable = false;
+
+	private int InvulnerableFrames = 0;
+
 	public int Maximum;
 	public int Current { get; private set; }
 	public bool Indestructible = false;
@@ -16,6 +19,14 @@ public class HealthResource : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Current = Maximum;
+	}
+
+	void FixedUpdate()
+	{
+		if(InvulnerableFrames > 0)
+		{
+			InvulnerableFrames = Mathf.Max(InvulnerableFrames - 1, 0);
+		}
 	}
 
 	public void Heal(int health)
@@ -27,8 +38,9 @@ public class HealthResource : MonoBehaviour {
 
 	public void Take(int health)
 	{
-		if (Invulnerable) return;
+		if (Invulnerable && InvulnerableFrames > 0) return;
 		Current = Mathf.Max(Current - health, 0);
+		InvulnerableFrames = 32;
 
 		if(Current <= 0)
 		{
