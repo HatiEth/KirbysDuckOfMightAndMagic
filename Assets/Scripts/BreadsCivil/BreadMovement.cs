@@ -3,7 +3,6 @@ using System.Collections;
 
 public class BreadMovement : MonoBehaviour {
 
-
 	public float Speed = 1f;
 	public bool moveByForce = false;
 	public float forceMultiplier = 1f;
@@ -20,6 +19,7 @@ public class BreadMovement : MonoBehaviour {
 		rigidbody = GetComponent<Rigidbody>();
 		anim = GetComponent<Animator>();
 		sprite = GetComponent<SpriteRenderer>();
+
 	}
 
 	public void Move(float h, float v)
@@ -39,7 +39,9 @@ public class BreadMovement : MonoBehaviour {
 		movement = movement.normalized * Speed * Time.deltaTime;
 
 		if (!moveByForce)
+		{
 			rigidbody.MovePosition (transform.position + movement); //current pos + movement
+		}
 		else
 			rigidbody.AddForce (movement * forceMultiplier);
 	}
