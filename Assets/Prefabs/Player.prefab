@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_shiftmodPlayer: {fileID: 11445992}
   m_movementPlayer: {fileID: 11426502}
+  Health: {fileID: 11492322}
 --- !u!114 &11469204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastCheckpoint: {fileID: 0}
-  fRespawnDelayS: 0.3
+  fRespawnDelayS: 2
 --- !u!114 &11480534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invulnerable: 0
-  Maximum: 100
+  Maximum: 8
   Indestructible: 1
 --- !u!135 &13524500
 SphereCollider:

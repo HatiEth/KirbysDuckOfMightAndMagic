@@ -16,9 +16,11 @@ public class PlayerRespawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator>();
+		anim = GetComponentInChildren<Animator>();
 		rigidbody = GetComponent<Rigidbody>();
 		Health = GetComponent<HealthResource>();
+
+
 		Health.DeathCallback += () => {
 			Debug.Log("Respawn");
 			StartCoroutine(Respawn());
@@ -28,13 +30,21 @@ public class PlayerRespawn : MonoBehaviour {
 	IEnumerator Respawn()
 	{
 		anim.SetTrigger("tRespawn");
-		GetComponentInChildren<SpriteRenderer>().enabled = false;
+		anim.SetLayerWeight(4, 1f);
+		Health.Invulnerable = true;
 		rigidbody.velocity = Vector3.zero;
+
+
+
 		yield return new WaitForSeconds(fRespawnDelayS);
-		rigidbody.velocity = Vector3.zero;
-		GetComponentInChildren<SpriteRenderer>().enabled = true;
-		transform.position = lastCheckpoint.position;
+		anim.SetTrigger("tRespawn");
 		Health.Heal(Health.Maximum);
+		transform.position = lastCheckpoint.position;
+		transform.rotation = Quaternion.identity;
+
+		yield return new WaitForSeconds(fRespawnDelayS);
+		anim.SetLayerWeight(4, 0f);
+		Health.Invulnerable = false;
 	}
 
 	public void ActivateCheckpoint(Transform t)

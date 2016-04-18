@@ -186,6 +186,94 @@ MonoBehaviour:
   m_v3CameraToPlayerOffset: {x: 0, y: 4, z: -4.85}
   m_fCameraSpeed: 2
   m_fVelocityWeigth: 3
+--- !u!1001 &408064651
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422758, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583158, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+      propertyPath: m_Size.y
+      value: 12.66
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9790303fd8334694fb9576eb9ff49113, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1025543539
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.3104806
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.7310944
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 466968, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3aea85973089cc842bab50ce7aeb9214, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1142050421
 Prefab:
   m_ObjectHideFlags: 0
@@ -310,7 +398,7 @@ Transform:
   m_LocalScale: {x: 3.2156436, y: 3.2156441, z: 3.2156441}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!1001 &1673148954
 Prefab:
   m_ObjectHideFlags: 0
@@ -413,7 +501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &2007813138
 Prefab:
   m_ObjectHideFlags: 0

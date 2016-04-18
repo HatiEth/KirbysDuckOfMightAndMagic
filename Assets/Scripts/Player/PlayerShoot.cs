@@ -10,6 +10,8 @@ public class PlayerShoot : MonoBehaviour
 	private PlayerShiftModel m_shiftmodPlayer;
 	[SerializeField]
 	private PlayerMovement m_movementPlayer;
+	[SerializeField]
+	private HealthResource Health;
 
 	private bool m_bHasShoot = true;
 	private bool m_bHasSlash = true;
@@ -73,7 +75,14 @@ public class PlayerShoot : MonoBehaviour
 		} 
 		else
 		{
-			m_movementPlayer.blockMovement = false;
+			if(Health && Health.Invulnerable)
+			{
+				m_movementPlayer.blockMovement = true;
+			}
+			else
+			{
+				m_movementPlayer.blockMovement = false;
+			}
 		}
 
 	}
