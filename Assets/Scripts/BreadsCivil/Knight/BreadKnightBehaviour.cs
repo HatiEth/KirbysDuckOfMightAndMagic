@@ -16,7 +16,7 @@ public class BreadKnightBehaviour : MonoBehaviour, IScareable {
 	Vector3 TargetPosition;
 	public float TargetAcquisition = 0.1f;
 	public float AttackChance = 0.33f;
-
+	public float AttackRange = 3.0f;
 	public Quaternion moveAngle;
 
 	Quaternion Angle;
@@ -54,7 +54,7 @@ public class BreadKnightBehaviour : MonoBehaviour, IScareable {
 
 				TargetPosition = Vector3.Lerp(TargetPosition, Player.position, TargetAcquisition);
 
-				if (Vector3.Distance(transform.position, Player.position) < 0.7f)
+				if (Vector3.Distance(transform.position, Player.position) < AttackRange)
 				{
 
 					if (Random.Range(0f, 1f) <= AttackChance)
@@ -111,6 +111,7 @@ public class BreadKnightBehaviour : MonoBehaviour, IScareable {
 
 	public void Scare(Transform t)
 	{
+		Debug.Log ("Imsoscared");
 		Alarmed = true;
 		TargetPosition = t.position;
 		StartCoroutine(AlarmAway());

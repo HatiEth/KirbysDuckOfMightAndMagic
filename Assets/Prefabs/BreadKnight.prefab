@@ -50,7 +50,6 @@ GameObject:
   - 114: {fileID: 11431868}
   - 114: {fileID: 11435574}
   - 114: {fileID: 11445946}
-  - 114: {fileID: 11480496}
   m_Layer: 9
   m_Name: BreadKnight
   m_TagString: Untagged
@@ -210,20 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0846a6bcff2404a936ad9cb2b43393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11480496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47a828d8a8da7e34aa6f30209bfd7bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Drops: []
-  Max: 3
-  DropChance: 0.1
 --- !u!114 &11493866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,6 +223,7 @@ MonoBehaviour:
   Alarmed: 0
   TargetAcquisition: 0.1
   AttackChance: 0.33
+  AttackRange: 3
   moveAngle: {x: 0, y: 0, z: 0, w: 0}
 --- !u!135 &13555906
 SphereCollider:
@@ -263,7 +249,7 @@ NavMeshAgent:
   m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 0
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 1.14
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
   m_AutoRepath: 1

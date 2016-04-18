@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class ScareCivils : MonoBehaviour {
+public class ScareCivils : MonoBehaviour 
+{
 
 	public float ScareTimeoutS = 3f;
 	private new Transform transform;
