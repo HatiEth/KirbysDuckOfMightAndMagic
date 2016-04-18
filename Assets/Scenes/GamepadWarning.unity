@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502b10922bea9b341a2bf760e5dc253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSize: 26
+  defaultSize: 22
   defaultWidth: 578
 --- !u!114 &1881862893
 MonoBehaviour:
@@ -459,7 +459,14 @@ MonoBehaviour:
 
     Bitte verwenden Sie ein
 
-    Enten-Gamepad'
+    Enten-Gamepad
+
+
+    Bei diesem Spiel handelt es
+
+    sich lediglich um einen
+
+    Brototypen. Badum. Tss.'
 --- !u!222 &1881862894
 CanvasRenderer:
   m_ObjectHideFlags: 0
