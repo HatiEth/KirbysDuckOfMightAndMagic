@@ -69,6 +69,7 @@ GameObject:
   - 114: {fileID: 11417268}
   - 114: {fileID: 11480534}
   - 114: {fileID: 11469794}
+  - 114: {fileID: 11418624}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -171,6 +172,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bBlocking: 0
+--- !u!114 &11418624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fb540245e535c49b1ceaaaad9f2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bBlocking: 0
 --- !u!114 &11426502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,6 +240,7 @@ MonoBehaviour:
   m_goProjectilePrefab: {fileID: 191906, guid: d3dfa9e5b2c248a45bdb07ed4d932c7a, type: 2}
   StaminaUsage: 0
   m_rigidPlayer: {fileID: 5492902}
+  m_fBowChargeTime: 0.5
 --- !u!114 &11463634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,7 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657cc73aa68301444893cc174216ac14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_shiftmodThis: {fileID: 11445992}
+  m_shiftmodPlayer: {fileID: 11445992}
+  m_movementPlayer: {fileID: 11426502}
 --- !u!114 &11469204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Invulnerable: 0
-  Maximum: 4
+  Maximum: 100
   Indestructible: 1
 --- !u!135 &13524500
 SphereCollider:
@@ -358,7 +373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300046, guid: bd010b989f888b84f8c621c48b3168c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c1f797bf84640f46a8d7cc3b3ed8947, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

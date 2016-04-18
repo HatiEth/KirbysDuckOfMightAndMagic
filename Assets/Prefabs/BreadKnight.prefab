@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Invulnerable: 0
   Maximum: 4
+  Indestructible: 0
 --- !u!114 &11435574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,8 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drops:
   - {fileID: 158296, guid: acaa2cfe42e7fac4f98a2304235d92d5, type: 2}
-  Max: 100
-  DropChance: 1
+  Max: 6
+  DropChance: 0.25
 --- !u!114 &11442530
 MonoBehaviour:
   m_ObjectHideFlags: 1

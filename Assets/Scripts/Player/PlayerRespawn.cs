@@ -12,8 +12,11 @@ public class PlayerRespawn : MonoBehaviour {
 
 	public float fRespawnDelayS = 1f;
 
+	private Animator anim;
+
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody>();
 		Health = GetComponent<HealthResource>();
 		Health.DeathCallback += () => {
@@ -24,6 +27,7 @@ public class PlayerRespawn : MonoBehaviour {
 
 	IEnumerator Respawn()
 	{
+		anim.SetTrigger("tRespawn");
 		GetComponentInChildren<SpriteRenderer>().enabled = false;
 		rigidbody.velocity = Vector3.zero;
 		yield return new WaitForSeconds(fRespawnDelayS);
